@@ -2,9 +2,9 @@
 title: "Grupo 3"
 author: |
    | Lucas de Miranda Oliveira\thanks{Número USP: 11577209 }
-   | Pedro Henrique Sebe Rodrigues\thanks{Número USP: }
+   | Pedro Henrique Sebe Rodrigues\thanks{Número USP: 10256915 }
    | Renata Massami Hirota\thanks{Número USP: 7165654}
-   | Rodolfo Riani Sundfeld\thanks{Número USP: }
+   | Rodolfo Riani Sundfeld\thanks{Número USP: 8535770 }
    | Rubens Santos Andrade Filho\thanks{Número USP: 10370336}
 date: "`r stringr::str_to_sentence(format(Sys.time(), '%B de %Y'))`"
 lang: pt-BR
