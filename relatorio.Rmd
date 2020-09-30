@@ -1,7 +1,7 @@
 ---
-title: "Nome do Projeto"
+title: "Grupo 3"
 author: |
-   | Lucas de Miranda Oliveira\thanks{Número USP: }
+   | Lucas de Miranda Oliveira\thanks{Número USP: 11577209 }
    | Pedro Henrique Sebe Rodrigues\thanks{Número USP: }
    | Renata Massami Hirota\thanks{Número USP: 7165654}
    | Rodolfo Riani Sundfeld\thanks{Número USP: }
@@ -29,7 +29,6 @@ header-includes:
    - \usepackage{amssymb}
    - \renewcommand\qedsymbol{$\blacksquare$}
    - \usepackage{cleveref}
-   
 output: 
   pdf_document: 
     fig_caption: yes
@@ -37,23 +36,24 @@ output:
     toc: true
     toc_depth: 2
     #keep_tex: true
-
 editor_options: 
   chunk_output_type: console
-
-
 bibliography: ref.bib
 ---
 
 \pagebreak
 
-# Problema 
+# Descrição do Problema 
 
-A partir de dados de boletins de ocorrência (BO) da Secretaria de Seguraça Pública (SSP) do estado de São Paulo, o objetivo deste estudo é prever a tipificação dos crimes reportados, visando, dessa forma, poder identificar que tipos de crimes deveriam receber maior atenção por parte do policiamento.
+Brasil tem segunda maior taxa de homicídios da América do Sul, segundo relatório das Nações Unidas em 2017,  e ocupa a 12º posição no ranking global de violência, com uma taxa de 27,5% de homicídios a cada 100 000 habitantes. Em 2016,  a Organização para a Cooperação e Desenvolvimento Econômico (OCDE) que as vítimas de assaltos no Brasil, nos últimos 12 meses a pesquisa, foram de 7,9% dos entrevistados, quase o dobro da média dos países entrevistados. Este preocupante quadro mostra a situação da violência e a necessidade de políticas públicas adequadas para segurança pública.
+
+
+ A partir de dados de boletins de ocorrência (BO) da Secretaria de Seguraça Pública (SSP) do estado de São Paulo, o objetivo deste estudo é prever <!--a tipificação dos crimes reportados,--> o horário do crime de acordo com algumas características, por exemplo, localização, sexo da vítima, cor da vítma, entre outros. Visando, dessa forma, identificar quais os horários das ocorrências de acordo com a tipologia do crime e  assim fornecer insights para o policiamento.  <!--poder identificar que tipos de crimes deveriam receber maior atenção por parte do policiamento.-->
 
 # Conjunto de dados
 
-Boletins de ocorrência na Grande São Paulo.
+A base de dados que será trabalhado refere-se a boletins de ocorrência na Grande São Paulo.
+
 
 ```{r dados, echo=FALSE}
 library(magrittr)
@@ -96,11 +96,32 @@ tibble::tribble(
 
 # Avaliação do problema
 
-Supervisionado ou não supervisionado (?),
-classificação ou regressão (?)
+A variável HORA_OCORRENCIA_BO será transformada de forma a produzir quatro classes de acordo com o horário do crime: manhã, tarde, noite e madrugada. O problema é de classificação.
 
-# References
+Os  métodos de aprendizagem supervisionada para classificação utilizados serão:
 
-<!-- Endereço da competição ou da página onde o problema está descrito --> 
+-  Multinomial logistic regression;
+- Support Vector Machine Multiclass;
+- K-Nearest Neighbor(KNN) Classification;
+- Feedforward Neural Network For Multiclass Classification;
+- Random Forest;
+- Boosting;
+- Bagging;
+- Gradient Boosting.
 
-[Crime Data in Brazil](https://www.kaggle.com/inquisitivecrow/crime-data-in-brazil)
+
+# Endereço
+<!-- Endereço da competição ou da página onde o problema est á descrito --> 
+A base dados que será  trabalhada é a Crime Data in Brazil e pode ser acessada  [**aqui**](https://www.kaggle.com/inquisitivecrow/crime-data-in-brazil).
+
+# Referências
+
+BREIMAN, Leo. Bagging predictors. Machine learning, v. 24, n. 2, p. 123-140, 1996.
+
+BREIMAN, Leo. Random forests. Machine learning, v. 45, n. 1, p. 5-32, 2001.
+
+FRIEDMAN, Jerome H. Stochastic gradient boosting. Computational statistics & data analysis, v.  38, n. 4, p. 367-378, 2002.
+
+HEARST, Marti A.. et al. Support vector machines. IEEE Intelligent Systems and their applications, v. 13, n. 4, p. 18-28, 1998
+
+SVOZIL, Daniel; KVASNICKA, Vladimir; POSPICHAL, Jiri. Introduction to multi-layer feed-forward neural networks. Chemometrics and intelligent laboratory systems, v. 39, n. 1, p. 43-62, 1997.
