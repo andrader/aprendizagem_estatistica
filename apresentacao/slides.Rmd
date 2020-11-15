@@ -1,0 +1,102 @@
+---
+title: "Criminalidade em SP"
+subtitle: "MAE5904 - MAE0501<br>Aprendizagem estatística em altas dimensões"
+author: ""
+institute: "IME USP"
+date: "`r stringr::str_to_sentence(format(Sys.time(), '%B de %Y'))`"
+lang: pt-BR
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+# Descrição do Problema 
+
+--
+- Segunda maior taxa de homicídios da América do Sul<sup>1</sup>
+- 27,5% de homicídios a cada 100 000 habitantes
+- 12ª posição no ranking global de violência
+- Necessidade de políticas públicas adequadas para segurança pública
+
+.footnote[
+[1] [Relatório ONU 2017](https://news.un.org/pt/story/2019/07/1679241)]
+
+--
+
+## Perguntas norteadoras
+
+--
+- Em que períodos do dia ocorrem mais crimes?
+- Existe relação entre localização e horário?
+- Que características das ocorrências são relacionadas ao período?
+
+
+---
+# Dados
+
+- Boletins de ocorrência (BOs) da Secretaria de Seguraça Pública (SSP) do estado de São Paulo
+- Escopo regional: Grande São Paulo
+- Escopo temporal: 2016 e 2017
+- Fonte: BOs disponibilizados em [Crime Data in Brazil (Kaggle)](https://www.kaggle.com/inquisitivecrow/crime-data-in-brazil)
+
+--
+
+## Possíveis variáveis de interesse
+
+--
+- Tipo de local da ocorrência
+- Localização (latitude e longitude) da ocorrência
+- Sexo da vítima
+- Idade da vítima
+- Envolvimento do autor do crime com a vítima
+- Tipificação do crime
+
+
+---
+
+```{r eval=require('magrittr'), echo=FALSE}
+tibble::tribble(
+                     ~variavel,                                                    ~descricao,
+                "ID_DELEGACIA", "Código da delegacia responsável pelo registro da ocorrencia",
+           "NOME_DEPARTAMENTO",                      "Departamento responsável pelo registro",
+              "NOME_SECCIONAL",               "Delegacia Seccional responsável pelo registro",
+              "NOME_DELEGACIA",                         "Delegacia responsável pelo registro",
+                      "CIDADE",                                          "Cidade de Registro",
+                      "ANO_BO",                                           "Ano da ocorrencia",
+                      "NUM_BO",                                                "Número do BO",
+      "NOME_DEPARTAMENTO_CIRC",                               "Departamento de Circunscrição",
+         "NOME_SECCIONAL_CIRC",                                  "Seccional de Circunscrição",
+         "NOME_DELEGACIA_CIRC",                                  "Delegacia de Circunscrição",
+         "NOME_MUNICIPIO_CIRC",                                  "Município de Circunscrição",
+               "DESCR_TIPO_BO",                                           "Tipo de Documento",
+          "DATA_OCORRENCIA_BO",                                          "Data da Ocorrência",
+          "HORA_OCORRENCIA_BO",                                          "Hora da Ocorrência",
+     "DATAHORA_COMUNICACAO_BO",                      "Data Hora da Comunicação da Ocorrência",
+                 "FLAG_STATUS",                                        "Status da Ocorrência",
+                     "RUBRICA",                             "Natureza jurídica da ocorrência",
+               "DESCR_CONDUTA",                                       "Conduta na Ocorrência",
+               "DESDOBRAMENTO",                                 "Desdobramento na Ocorrência",
+             "DESCR_TIPOLOCAL",                                               "Tipo de Local",
+          "DESCR_SUBTIPOLOCAL",                               "Descrição do subTipo de local",
+                  "LOGRADOURO",                                        "Logradouro dos fatos",
+           "NUMERO_LOGRADOURO",                              "Numero do Logradouro dos fatos",
+                    "LATITUDE",                                      "Latitude da Ocorrência",
+                   "LONGITUDE",                                     "Longitude da Ocorrência",
+           "DESCR_TIPO_PESSOA",                     "Qualificação do envolvido na ocorrência",
+           "FLAG_VITIMA_FATAL",                      "Condição do Autor / Vítma na corrência",
+                 "SEXO_PESSOA",                                                        "Sexo",
+                "IDADE_PESSOA",                                                       "Idade",
+                   "COR_CUTIS",                                                 "Cor da Pele"
+     ) %>% 
+  setNames(c("Variável", "Descrição")) %>% 
+  DT::datatable()
+```
+
+
+---
+
