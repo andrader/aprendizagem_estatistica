@@ -45,14 +45,14 @@ bibliography: ref.bib
 
 # Descrição do Problema 
 
-Brasil tem segunda maior taxa de homicídios da América do Sul, segundo relatório das Nações Unidas em 2017,  e ocupa a 12º posição no ranking global de violência, com uma taxa de 27,5% de homicídios a cada 100 000 habitantes. Em 2016,  a Organização para a Cooperação e Desenvolvimento Econômico (OCDE) que as vítimas de assaltos no Brasil, nos últimos 12 meses a pesquisa, foram de 7,9% dos entrevistados, quase o dobro da média dos países entrevistados. Este preocupante quadro mostra a situação da violência e a necessidade de políticas públicas adequadas para segurança pública.
+O Brasil tem a segunda maior taxa de homicídios da América do Sul, segundo relatório das Nações Unidas em 2017, e ocupa a 12ª posição no ranking global de violência, com uma taxa de 27,5% de homicídios a cada 100 000 habitantes. Em 2016, a Organização para a Cooperação e Desenvolvimento Econômico (OCDE) divulgou que as vítimas de assaltos no Brasil, nos últimos 12 meses da pesquisa, foram de 7,9% dos entrevistados, quase o dobro da média dos países em que a pesquisa foi realizada. Este preocupante quadro mostra a situação da violência e a necessidade de políticas públicas adequadas para segurança pública.
 
 
- A partir de dados de boletins de ocorrência (BO) da Secretaria de Seguraça Pública (SSP) do estado de São Paulo, o objetivo deste estudo é prever <!--a tipificação dos crimes reportados,--> o horário do crime de acordo com algumas características, por exemplo, localização, sexo da vítima, cor da vítma, entre outros. Visando, dessa forma, identificar quais os horários das ocorrências de acordo com a tipologia do crime e  assim fornecer insights para o policiamento.  <!--poder identificar que tipos de crimes deveriam receber maior atenção por parte do policiamento.-->
+ A partir de dados de boletins de ocorrência (BO) da Secretaria de Seguraça Pública (SSP) do estado de São Paulo, o objetivo deste estudo é prever o horário do crime de acordo com algumas características, por exemplo, localização, sexo da vítima, cor da vítma, entre outros. Visando, dessa forma, identificar quais os horários das ocorrências de acordo com a tipologia do crime e assim fornecer insights para o policiamento. 
 
 # Conjunto de dados
 
-A base de dados que será trabalhado refere-se a boletins de ocorrência na Grande São Paulo.
+A base de dados que será trabalhada refere-se a boletins de ocorrência na Grande São Paulo.
 
 
 ```{r dados, echo=FALSE}
@@ -100,7 +100,7 @@ A variável HORA_OCORRENCIA_BO será transformada de forma a produzir quatro cla
 
 Os  métodos de aprendizagem supervisionada para classificação utilizados serão:
 
--  Multinomial logistic regression;
+- Multinomial logistic regression;
 - Support Vector Machine Multiclass;
 - K-Nearest Neighbor(KNN) Classification;
 - Feedforward Neural Network For Multiclass Classification;
@@ -112,7 +112,7 @@ Os  métodos de aprendizagem supervisionada para classificação utilizados ser�
 
 # Endereço
 <!-- Endereço da competição ou da página onde o problema est á descrito --> 
-A base dados que será  trabalhada é a Crime Data in Brazil e pode ser acessada  [**aqui**](https://www.kaggle.com/inquisitivecrow/crime-data-in-brazil).
+A base dados que será trabalhada é a Crime Data in Brazil e pode ser acessada  [**aqui**](https://www.kaggle.com/inquisitivecrow/crime-data-in-brazil).
 
 # Referências
 
