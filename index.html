@@ -77,14 +77,13 @@ class: center, middle, inverse, title-slide
 - Localização (latitude e longitude) da ocorrência
 - Sexo da vítima
 - Idade da vítima
-- Envolvimento do autor do crime com a vítima
 - Tipificação do crime
 
 
 ---
 
-<div id="htmlwidget-859454c375b6c411d8fd" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-859454c375b6c411d8fd">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],["ID_DELEGACIA","NOME_DEPARTAMENTO","NOME_SECCIONAL","NOME_DELEGACIA","CIDADE","ANO_BO","NUM_BO","NOME_DEPARTAMENTO_CIRC","NOME_SECCIONAL_CIRC","NOME_DELEGACIA_CIRC","NOME_MUNICIPIO_CIRC","DESCR_TIPO_BO","DATA_OCORRENCIA_BO","HORA_OCORRENCIA_BO","DATAHORA_COMUNICACAO_BO","FLAG_STATUS","RUBRICA","DESCR_CONDUTA","DESDOBRAMENTO","DESCR_TIPOLOCAL","DESCR_SUBTIPOLOCAL","LOGRADOURO","NUMERO_LOGRADOURO","LATITUDE","LONGITUDE","DESCR_TIPO_PESSOA","FLAG_VITIMA_FATAL","SEXO_PESSOA","IDADE_PESSOA","COR_CUTIS"],["Código da delegacia responsável pelo registro da ocorrencia","Departamento responsável pelo registro","Delegacia Seccional responsável pelo registro","Delegacia responsável pelo registro","Cidade de Registro","Ano da ocorrencia","Número do BO","Departamento de Circunscrição","Seccional de Circunscrição","Delegacia de Circunscrição","Município de Circunscrição","Tipo de Documento","Data da Ocorrência","Hora da Ocorrência","Data Hora da Comunicação da Ocorrência","Status da Ocorrência","Natureza jurídica da ocorrência","Conduta na Ocorrência","Desdobramento na Ocorrência","Tipo de Local","Descrição do subTipo de local","Logradouro dos fatos","Numero do Logradouro dos fatos","Latitude da Ocorrência","Longitude da Ocorrência","Qualificação do envolvido na ocorrência","Condição do Autor / Vítma na corrência","Sexo","Idade","Cor da Pele"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Variável<\/th>\n      <th>Descrição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0a6e4e4ac0fe13b9b353" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0a6e4e4ac0fe13b9b353">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],["ID_DELEGACIA","NOME_DEPARTAMENTO","NOME_SECCIONAL","NOME_DELEGACIA","CIDADE","ANO_BO","NUM_BO","NOME_DEPARTAMENTO_CIRC","NOME_SECCIONAL_CIRC","NOME_DELEGACIA_CIRC","NOME_MUNICIPIO_CIRC","DESCR_TIPO_BO","DATA_OCORRENCIA_BO","HORA_OCORRENCIA_BO","DATAHORA_COMUNICACAO_BO","FLAG_STATUS","RUBRICA","DESCR_CONDUTA","DESDOBRAMENTO","DESCR_TIPOLOCAL","DESCR_SUBTIPOLOCAL","LOGRADOURO","NUMERO_LOGRADOURO","LATITUDE","LONGITUDE","DESCR_TIPO_PESSOA","FLAG_VITIMA_FATAL","SEXO_PESSOA","IDADE_PESSOA","COR_CUTIS"],["Código da delegacia responsável pelo registro da ocorrencia","Departamento responsável pelo registro","Delegacia Seccional responsável pelo registro","Delegacia responsável pelo registro","Cidade de Registro","Ano da ocorrencia","Número do BO","Departamento de Circunscrição","Seccional de Circunscrição","Delegacia de Circunscrição","Município de Circunscrição","Tipo de Documento","Data da Ocorrência","Hora da Ocorrência","Data Hora da Comunicação da Ocorrência","Status da Ocorrência","Natureza jurídica da ocorrência","Conduta na Ocorrência","Desdobramento na Ocorrência","Tipo de Local","Descrição do subTipo de local","Logradouro dos fatos","Numero do Logradouro dos fatos","Latitude da Ocorrência","Longitude da Ocorrência","Qualificação do envolvido na ocorrência","Condição do Autor / Vítma na corrência","Sexo","Idade","Cor da Pele"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Variável<\/th>\n      <th>Descrição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 
 
 ---
@@ -111,6 +110,18 @@ class: center, middle, inverse, title-slide
 
 ![](index_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
 
+---
+
+### Distribuição da idade por cor
+
+![](index_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+---
+
+### Vítimas fatais
+
+![](index_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
 
 ---
 # Métodos utilizados
@@ -134,9 +145,6 @@ class: center, middle, inverse, title-slide
 --
 - É uma extensão da regressão logística binária que permite mais de duas categorias da variável dependente.
 
-
----
-## Árvore de decisão
 
 ---
 ## Random Forest

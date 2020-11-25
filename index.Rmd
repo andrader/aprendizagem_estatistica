@@ -62,7 +62,6 @@ output:
 - Localização (latitude e longitude) da ocorrência
 - Sexo da vítima
 - Idade da vítima
-- Envolvimento do autor do crime com a vítima
 - Tipificação do crime
 
 
@@ -225,6 +224,47 @@ da %>%
 
 ```
 
+---
+
+### Distribuição da idade por cor
+
+```{r echo = FALSE, message = FALSE, warning = FALSE, fig.width = 10}
+da %>%
+  dplyr::mutate(
+    idade_pessoa = as.numeric(idade_pessoa),
+    cor_cutis = dplyr::na_if(cor_cutis, "NULL")
+  ) %>% 
+  dplyr::filter(descr_tipo_pessoa == "Vítima", 
+                dplyr::between(idade_pessoa, 0, 100)) %>% 
+  dplyr::select(idade_pessoa, cor_cutis) %>% 
+  dplyr::filter(!is.na(cor_cutis)) %>% 
+  ggplot2::ggplot(ggplot2::aes(x = idade_pessoa, y = cor_cutis, fill = cor_cutis)) +
+  ggridges::geom_density_ridges() +
+  ggplot2::theme_minimal(14) +
+  ggplot2::scale_fill_viridis_d(begin = 0.2, direction = -1) +
+  ggplot2::labs(x = "Idade da vítima", y = "") +
+  ggplot2::theme(legend.position = "none")
+```
+
+---
+
+### Vítimas fatais
+
+```{r echo = FALSE, fig.width = 10}
+da %>%
+  dplyr::filter(flag_vitima_fatal %in% c("S", "N"),
+                descr_tipo_pessoa == "Vítima") %>%
+  dplyr::count(flag_vitima_fatal, cor_cutis) %>%
+  dplyr::group_by(cor_cutis) %>%
+  dplyr::mutate(prop = n/sum(n), pct = scales::percent(prop)) %>% 
+  ggplot2::ggplot(ggplot2::aes(x = cor_cutis, y = prop, fill = flag_vitima_fatal)) +
+  ggplot2::geom_col() +
+  ggplot2::scale_fill_viridis_d(begin = 0.1, end = 0.8) +
+  ggplot2::scale_y_continuous(labels = scales::percent) +
+  ggplot2::labs(x = "Cor", y = "", fill = "Vítima fatal") +
+  ggplot2::theme_minimal()
+```
+
 
 ---
 # Métodos utilizados
@@ -248,9 +288,6 @@ da %>%
 --
 - É uma extensão da regressão logística binária que permite mais de duas categorias da variável dependente.
 
-
----
-## Árvore de decisão
 
 ---
 ## Random Forest
