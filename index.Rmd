@@ -28,7 +28,7 @@ output:
 
 --
 - Segunda maior taxa de homicídios da América do Sul<sup>1</sup>
-- 27,5% de homicídios a cada 100 000 habitantes
+- 30,5 homicídios a cada 100 000 habitantes
 - 12ª posição no ranking global de violência
 - Necessidade de políticas públicas adequadas para segurança pública
 
