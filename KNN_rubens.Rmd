@@ -1,0 +1,117 @@
+---
+title: "KNN"
+output: html_notebook
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include=FALSE}
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(lubridate)
+library(stringr)
+library(tidyverse)
+#library(ggmap)
+library(sf)
+library(mapview)
+```
+
+
+1. Carregamos os dados e fizemos alguns tratamentos
+```{r, warning=FALSE, cache=TRUE}
+.dados <- read.csv('data/RDO_3.csv', fileEncoding="UTF-8-BOM")
+```
+
+
+```{r, warning=FALSE, cache=TRUE}
+
+dados <- .dados %>% 
+  
+  # filter(across(
+  #   everything(), ~ !grepl("Informação protegida",.x, T))) %>% 
+  mutate(
+    IDADE_PESSOA = as.numeric(IDADE_PESSOA),
+    DATA_OCORRENCIA_BO = as.Date(DATA_OCORRENCIA_BO,"%d/%m/%Y"),
+    HORA_OCORRENCIA_BO = hour(strptime(HORA_OCORRENCIA_BO,"%H:%M")),
+    LATITUDE = as.numeric(LATITUDE),
+    LONGITUDE = as.numeric(LONGITUDE),
+    
+    target = cut(HORA_OCORRENCIA_BO,breaks=seq(0,24,by=6),
+                 right=FALSE,
+                 # breaks = c(-0.5, 5.5, 11.5, 17.5, 23.5), 
+                 labels = c('4.Madrugada', '1.Manhã', '2.Tarde', '3.Noite'))
+  ) %>% 
+  select(target,LATITUDE,
+         LONGITUDE, IDADE_PESSOA) %>% 
+  
+  drop_na()
+
+head(dados)
+
+target <- "target"
+predictors <- base::setdiff(names(dados),target)
+
+dados %>% glimpse()
+```
+
+
+```{r, warning=FALSE}
+# library(skimr)
+# 
+# df %>% skim()
+```
+
+
+2. Dividimos o conjunto de observações aleatoriamente em dois conjutos, de treinamento e teste, com proporções 70% e 30%, respectivamente.
+
+```{r}
+
+
+n <- nrow(dados)
+# pega indices aleatórios para amostra de treinamento
+idx_tr <- sample(seq(n),size = 0.7*n)
+
+# divide observações
+treino <- dados[idx_tr,]
+teste <- dados[-idx_tr,]
+```
+
+3. Normalizamos cada conjunto de dados
+
+```{r}
+normalizar <- function(x) (x - min(x)) / (max(x) - min(x))
+
+train_std <- treino %>% mutate_if(is.numeric, normalizar)
+
+test_std <- teste %>% mutate_if(is.numeric, normalizar)
+
+
+```
+
+4. 
+
+```{r}
+library(class)
+previsoes <- knn(train = treino[,-"target"], 
+                 test  = teste[,-"target"], 
+                 cl = treino[,target],
+                 k=5)
+# mean(Caravan_teste[,86] != previsoes)
+```
+
+```{r}
+
+fit <- glm(target ~ ., treino)
+
+```
+
+
+
+
+
+
+
+
+
+
