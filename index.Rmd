@@ -14,6 +14,15 @@ output:
       countIncrementalSlides: false
 ---
 
+# Grupo
+
+- Lucas de Miranda Oliveira - doutorando Estatística
+- Pedro Henrique Sebe Rodrigues - graduando Ciêcias Moleculares
+- Renata Massami Hirota - graduanda Estatística
+- Rodolfo Riani Sundfeld - metrando Estatística
+- Rubens Santos Andrade Filho - graduando Estatística
+
+---
 
 # Descrição do Problema 
 
@@ -100,6 +109,87 @@ tibble::tribble(
 
 ---
 # Análise Descritiva
+
+### Tipo de local da ocorrência
+
+```{r echo = FALSE, fig.width=10, fig.height=6}
+library(magrittr)
+da <- readr::read_rds("apresentacao/dados.rds") %>% 
+  janitor::clean_names()
+
+da %>% 
+  dplyr::count(descr_tipolocal, sort = TRUE) %>% 
+  dplyr::mutate(prop = n/sum(n)) %>% 
+  head(10) %>% 
+  dplyr::mutate(descr_tipolocal = forcats::fct_reorder(descr_tipolocal, n)) %>% 
+  ggplot2::ggplot(ggplot2::aes(y = descr_tipolocal, x = prop)) +
+  ggplot2::geom_col() +
+  ggplot2::scale_x_continuous(labels = scales::label_percent(accuracy = 1)) +
+  ggplot2::labs(y = "", x = "", title = "Principais tipos de local das ocorrências") +
+  ggplot2::theme_minimal(14)
+```
+
+---
+
+### Localização
+
+```{r warning = FALSE, echo = FALSE, fig.width=10, fig.height=8}
+sh_sp <- readr::read_rds("apresentacao/sh_sp.rds")
+da <- da %>% 
+  dplyr::mutate(
+    latitude = as.numeric(latitude),
+    longitude = as.numeric(longitude)
+  )
+
+da_mapa <- da %>% 
+  dplyr::filter(!is.na(longitude), !is.na(latitude),
+                dplyr::between(latitude, -25, -23), 
+                dplyr::between(longitude, -48, -46))
+
+ggplot2::ggplot() +
+  ggplot2::geom_sf(data = sh_sp) +
+  ggplot2::geom_point(
+    data = da_mapa, 
+    ggplot2::aes(x = longitude, y = latitude),
+    alpha = .1, size = .0001) +
+  ggplot2::theme_void()
+
+```
+
+---
+### Sexo e idade das vítimas
+
+```{r echo = FALSE, message = FALSE, warning = FALSE, fig.height = 3, fig.width = 8}
+da %>% 
+  dplyr::filter(descr_tipo_pessoa == "Vítima") %>% 
+  dplyr::count(sexo_pessoa) %>% 
+  dplyr::mutate(prop = n/sum(n), pct = "pct") %>% 
+  ggplot2::ggplot(ggplot2::aes(y = pct, x = prop, fill = sexo_pessoa)) +
+  ggplot2::geom_col() +
+  ggplot2::geom_text(
+    ggplot2::aes(label = scales::percent(prop)),
+    position = ggplot2::position_stack(vjust = .5),
+    colour = "white", size = 6
+  ) +
+  ggplot2::scale_x_continuous(labels = scales::label_percent(accuracy = 1)) +
+  ggplot2::labs(y = "", x = "", title = "Sexo das vítimas", fill = "") +
+  ggplot2::scale_fill_viridis_d(begin = 0.2, end = 0.6) +
+  ggplot2::theme_void(14) +
+  ggplot2::theme(axis.text.y = ggplot2::element_blank(),
+                 legend.position = "bottom")
+
+da_idade <- da %>% 
+  dplyr::mutate(idade_pessoa = as.numeric(idade_pessoa)) %>%  
+  dplyr::filter(descr_tipo_pessoa == "Vítima", 
+                dplyr::between(idade_pessoa, 0, 100))
+da_idade %>% 
+  ggplot2::ggplot(ggplot2::aes(x = idade_pessoa)) +
+  ggplot2::geom_histogram(ggplot2::aes(y = ..density..)) +
+  ggplot2::geom_vline(xintercept = mean(da_idade$idade_pessoa)) +
+  ggplot2::geom_vline(xintercept = median(da_idade$idade_pessoa), colour = "red") +
+  ggplot2::theme_minimal(14) +
+  ggplot2::labs(title = "Idade das vítimas")
+```
 
 
 ---
