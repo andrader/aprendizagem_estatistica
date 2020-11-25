@@ -159,7 +159,7 @@ ggplot2::ggplot() +
 ---
 ### Sexo e idade das vítimas
 
-```{r echo = FALSE, message = FALSE, warning = FALSE, fig.height = 3, fig.width = 8}
+```{r echo = FALSE, message = FALSE, warning = FALSE, fig.height = 3, fig.width = 10}
 da %>% 
   dplyr::filter(descr_tipo_pessoa == "Vítima") %>% 
   dplyr::count(sexo_pessoa) %>% 
@@ -189,6 +189,40 @@ da_idade %>%
   ggplot2::geom_vline(xintercept = median(da_idade$idade_pessoa), colour = "red") +
   ggplot2::theme_minimal(14) +
   ggplot2::labs(title = "Idade das vítimas")
+```
+
+---
+
+### Tipificação
+
+```{r echo = FALSE, fig.width = 10}
+da %>%
+  dplyr::mutate(
+    rubrica_agrupada = dplyr::case_when(
+      stringr::str_detect(rubrica, "Estupro") ~ "Estupro",
+      stringr::str_detect(rubrica, "Furto") ~ "Furto",
+      stringr::str_detect(rubrica, "Roubo") ~ "Roubo",
+      stringr::str_detect(rubrica, "Homicídio") ~ "Homicídio",
+      stringr::str_detect(rubrica, "Lesão") ~ "Lesão corporal"
+    )
+  ) %>%
+  dplyr::count(rubrica_agrupada, rubrica) %>%
+  ggplot2::ggplot(ggplot2::aes(
+    area = n,
+    fill = rubrica_agrupada,
+    subgroup = rubrica_agrupada,
+    label = scales::number(n, scale = .001, suffix = "k", accuracy = 1)
+  )) +
+  treemapify::geom_treemap() +
+  treemapify::geom_treemap_subgroup_border() +
+  treemapify::geom_treemap_text(colour = "white",
+                                place = "centre",
+                                grow = FALSE) +
+  ggplot2::scale_fill_viridis_d() +
+  ggplot2::labs(fill = "Rubrica agrupada") +
+  ggplot2::theme(legend.text = ggplot2::element_text(size = 14))
+  
+
 ```
 
 
