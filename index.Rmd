@@ -7,7 +7,7 @@ date: "`r stringr::str_to_sentence(format(Sys.time(), '%B de %Y'))`"
 lang: pt-BR
 output:
   xaringan::moon_reader:
-    yolo: true
+    yolo: false
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -266,6 +266,53 @@ da %>%
   ggplot2::theme_minimal()
 ```
 
+---
+
+### Horário e dia da semana
+
+```{r echo = FALSE, fig.width = 10, warning = FALSE}
+da %>% tibble::as_tibble() %>% 
+  dplyr::filter(hora_ocorrencia_bo != "NULL") %>% 
+  dplyr::mutate(
+    horario = lubridate::hm(hora_ocorrencia_bo) %>% lubridate::hour(),
+    hora_cat = dplyr::case_when(
+      horario < 6 ~ "madrugada",
+      horario < 12 ~ "manhã",
+      horario < 18 ~ "tarde",
+      horario < 24 ~ "noite"
+    )
+  ) %>%
+  dplyr::filter(!is.na(hora_cat)) %>% 
+  dplyr::count(hora_cat) %>% 
+  dplyr::mutate(hora_cat = forcats::fct_reorder(hora_cat, c(1,2,4,3)),
+                prop = n/sum(n)) %>% 
+  ggplot2::ggplot(ggplot2::aes(x = hora_cat, y = prop)) +
+  ggplot2::geom_col(fill = viridis::viridis(1, begin = 0.2)) +
+  ggplot2::geom_text(ggplot2::aes(label = scales::percent(prop, accuracy = .1)),
+                     vjust = -1) +
+  ggplot2::scale_y_continuous(labels = scales::percent) +
+  ggplot2::theme_minimal(16) +
+  ggplot2::labs(x = "", y = "")
+
+```
+---
+
+```{r warning = FALSE, message = FALSE, echo = FALSE, fig.width = 10}
+da %>% tibble::as_tibble() %>%
+  dplyr::filter(hora_ocorrencia_bo != "NULL") %>%
+  dplyr::mutate(
+    hora = paste0("2020-01-01 ", hora_ocorrencia_bo, ":00"),
+    hora = lubridate::as_datetime(hora),
+    dia_semana = lubridate::wday(lubridate::dmy(data_ocorrencia_bo))
+  ) %>%
+  ggplot2::ggplot(ggplot2::aes(y = dia_semana, x = hora)) +
+  ggbeeswarm::geom_quasirandom(alpha = .1, groupOnX = FALSE,
+                               fill = viridis::viridis(1, begin = .2)) +
+  ggplot2::scale_x_datetime(date_labels = "%H:%M", date_breaks = "1 hour") +
+  ggplot2::theme_minimal(16) +
+  ggplot2::labs(x = "", y = "dia da semana") 
+
+```
 
 ---
 # Métodos utilizados
@@ -305,7 +352,9 @@ da %>%
 --
 - Corrigem o hábito das árvores de decisão de sobreajustar os dados de treinamento. 
 
-
+---
+  
+.center[![Random forest](mapa_rf.jpeg)]
 
 ---
 ## KNN - K-Nearest Neighbor Classification
@@ -322,6 +371,9 @@ da %>%
 --
 - Valores maiores de k reduzem o efeito do ruído na classificação, mas tornam os limites entre as classes menos distintos.
 
+---
+
+.center[![KNN](mapa_knn.jpeg)]
 
 ---
 ## XGBoost
@@ -334,3 +386,54 @@ da %>%
 
 --
 - Validação cruzada: O algoritmo vem com método de validação cruzada embutido em cada iteração, eliminando a necessidade de programar explicitamente essa pesquisa e especificar o número exato de iterações de reforço necessárias em uma única execução.
+
+---
+  
+.center[![XGB](mapa_xgb.jpeg)]
+
+---
+# Resultados
+  
+```{r, echo=FALSE}
+
+res <- tibble::tibble(
+  Método = c(
+    "Regressão Logística Multinomial",
+    "Random Forest",
+    "KNN",
+    "XGBoost"
+  ),
+  'Acurácia Treino' = c(
+    .322,0.362,0.609,0.845
+  ),
+  'Acurácia Teste' = c(
+    .328,0.360,0.569,0.837
+  ),
+)
+
+res %>% knitr::kable()
+```
+
+---
+  
+.center[![KNN](mapa_knn.jpeg)]
+
+---
+  
+.center[![XGB](mapa_xgb.jpeg)]
+
+---
+
+# Conclusão
+
+- Variáveis espaciais, LAGITUDE e LONGITUDE, são as que mais apresentaram relevância nos modelos ajustados.
+
+.center[![variaveis](5variaveismaisimportantes.png)]
+
+
+---
+# Conclusão
+
+- Variáveis espaciais, LAGITUDE e LONGITUDE, são as que mais apresentaram relevância nos modelos ajustados.
+
+- Dos métodos ajustados, XGBoost foi o que apresentou a melhor acurácia após otimização de hiperparâmetros, seguido pelo KNN.

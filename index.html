@@ -82,8 +82,8 @@ class: center, middle, inverse, title-slide
 
 ---
 
-<div id="htmlwidget-9bb0a1450bdc61c7d3be" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9bb0a1450bdc61c7d3be">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],["ID_DELEGACIA","NOME_DEPARTAMENTO","NOME_SECCIONAL","NOME_DELEGACIA","CIDADE","ANO_BO","NUM_BO","NOME_DEPARTAMENTO_CIRC","NOME_SECCIONAL_CIRC","NOME_DELEGACIA_CIRC","NOME_MUNICIPIO_CIRC","DESCR_TIPO_BO","DATA_OCORRENCIA_BO","HORA_OCORRENCIA_BO","DATAHORA_COMUNICACAO_BO","FLAG_STATUS","RUBRICA","DESCR_CONDUTA","DESDOBRAMENTO","DESCR_TIPOLOCAL","DESCR_SUBTIPOLOCAL","LOGRADOURO","NUMERO_LOGRADOURO","LATITUDE","LONGITUDE","DESCR_TIPO_PESSOA","FLAG_VITIMA_FATAL","SEXO_PESSOA","IDADE_PESSOA","COR_CUTIS"],["Código da delegacia responsável pelo registro da ocorrencia","Departamento responsável pelo registro","Delegacia Seccional responsável pelo registro","Delegacia responsável pelo registro","Cidade de Registro","Ano da ocorrencia","Número do BO","Departamento de Circunscrição","Seccional de Circunscrição","Delegacia de Circunscrição","Município de Circunscrição","Tipo de Documento","Data da Ocorrência","Hora da Ocorrência","Data Hora da Comunicação da Ocorrência","Status da Ocorrência","Natureza jurídica da ocorrência","Conduta na Ocorrência","Desdobramento na Ocorrência","Tipo de Local","Descrição do subTipo de local","Logradouro dos fatos","Numero do Logradouro dos fatos","Latitude da Ocorrência","Longitude da Ocorrência","Qualificação do envolvido na ocorrência","Condição do Autor / Vítma na corrência","Sexo","Idade","Cor da Pele"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Variável<\/th>\n      <th>Descrição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-424a39768e98abfb70c6" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-424a39768e98abfb70c6">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],["ID_DELEGACIA","NOME_DEPARTAMENTO","NOME_SECCIONAL","NOME_DELEGACIA","CIDADE","ANO_BO","NUM_BO","NOME_DEPARTAMENTO_CIRC","NOME_SECCIONAL_CIRC","NOME_DELEGACIA_CIRC","NOME_MUNICIPIO_CIRC","DESCR_TIPO_BO","DATA_OCORRENCIA_BO","HORA_OCORRENCIA_BO","DATAHORA_COMUNICACAO_BO","FLAG_STATUS","RUBRICA","DESCR_CONDUTA","DESDOBRAMENTO","DESCR_TIPOLOCAL","DESCR_SUBTIPOLOCAL","LOGRADOURO","NUMERO_LOGRADOURO","LATITUDE","LONGITUDE","DESCR_TIPO_PESSOA","FLAG_VITIMA_FATAL","SEXO_PESSOA","IDADE_PESSOA","COR_CUTIS"],["Código da delegacia responsável pelo registro da ocorrencia","Departamento responsável pelo registro","Delegacia Seccional responsável pelo registro","Delegacia responsável pelo registro","Cidade de Registro","Ano da ocorrencia","Número do BO","Departamento de Circunscrição","Seccional de Circunscrição","Delegacia de Circunscrição","Município de Circunscrição","Tipo de Documento","Data da Ocorrência","Hora da Ocorrência","Data Hora da Comunicação da Ocorrência","Status da Ocorrência","Natureza jurídica da ocorrência","Conduta na Ocorrência","Desdobramento na Ocorrência","Tipo de Local","Descrição do subTipo de local","Logradouro dos fatos","Numero do Logradouro dos fatos","Latitude da Ocorrência","Longitude da Ocorrência","Qualificação do envolvido na ocorrência","Condição do Autor / Vítma na corrência","Sexo","Idade","Cor da Pele"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Variável<\/th>\n      <th>Descrição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 
 
 ---
@@ -122,6 +122,14 @@ class: center, middle, inverse, title-slide
 
 ![](index_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
 
+---
+
+### Horário e dia da semana
+
+![](index_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+---
+
+![](index_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
 
 ---
 # Métodos utilizados
@@ -161,7 +169,9 @@ class: center, middle, inverse, title-slide
 --
 - Corrigem o hábito das árvores de decisão de sobreajustar os dados de treinamento. 
 
-
+---
+  
+.center[![Random forest](mapa_rf.jpeg)]
 
 ---
 ## KNN - K-Nearest Neighbor Classification
@@ -178,6 +188,9 @@ class: center, middle, inverse, title-slide
 --
 - Valores maiores de k reduzem o efeito do ruído na classificação, mas tornam os limites entre as classes menos distintos.
 
+---
+
+.center[![KNN](mapa_knn.jpeg)]
 
 ---
 ## XGBoost
@@ -190,6 +203,45 @@ class: center, middle, inverse, title-slide
 
 --
 - Validação cruzada: O algoritmo vem com método de validação cruzada embutido em cada iteração, eliminando a necessidade de programar explicitamente essa pesquisa e especificar o número exato de iterações de reforço necessárias em uma única execução.
+
+---
+  
+.center[![XGB](mapa_xgb.jpeg)]
+
+---
+# Resultados
+  
+
+|Método                          | Acurácia Treino| Acurácia Teste|
+|:-------------------------------|---------------:|--------------:|
+|Regressão Logística Multinomial |           0.322|          0.328|
+|Random Forest                   |           0.362|          0.360|
+|KNN                             |           0.609|          0.569|
+|XGBoost                         |           0.845|          0.837|
+
+---
+  
+.center[![KNN](mapa_knn.jpeg)]
+
+---
+  
+.center[![XGB](mapa_xgb.jpeg)]
+
+---
+
+# Conclusão
+
+- Variáveis espaciais, LAGITUDE e LONGITUDE, são as que mais apresentaram relevância nos modelos ajustados.
+
+.center[![variaveis](5variaveismaisimportantes.png)]
+
+
+---
+# Conclusão
+
+- Variáveis espaciais, LAGITUDE e LONGITUDE, são as que mais apresentaram relevância nos modelos ajustados.
+
+- Dos métodos ajustados, XGBoost foi o que apresentou a melhor acurácia após otimização de hiperparâmetros, seguido pelo KNN.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
