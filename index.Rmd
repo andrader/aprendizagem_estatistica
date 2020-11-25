@@ -110,12 +110,24 @@ tibble::tribble(
 ---
 # Análise Descritiva
 
-### Tipo de local da ocorrência
-
-```{r echo = FALSE, fig.width=10, fig.height=6}
+```{r echo = FALSE}
 library(magrittr)
 da <- readr::read_rds("apresentacao/dados.rds") %>% 
   janitor::clean_names()
+
+skim <- da %>% dplyr::select(-v31) %>% dplyr::mutate_all(~dplyr::na_if(., "NULL")) %>% skimr::skim()
+
+skim %>% dplyr::select(skim_variable, n_missing, complete_rate) %>% 
+  DT::datatable()
+```
+
+
+
+---
+
+### Tipo de local da ocorrência
+
+```{r echo = FALSE, fig.width=10, fig.height=6}
 
 da %>% 
   dplyr::count(descr_tipolocal, sort = TRUE) %>% 
