@@ -428,7 +428,7 @@ res %>% knitr::kable()
 
 - Variáveis espaciais, LAGITUDE e LONGITUDE, são as que mais apresentaram relevância nos modelos ajustados.
 
-.center[![variaveis](5variaveismaisimportantes.png)]
+.center[![variaveis](var_importantes.png)]
 
 
 ---
