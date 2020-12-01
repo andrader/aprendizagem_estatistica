@@ -1,0 +1,142 @@
+---
+title: "MAE5094 - Trabalho"
+author: "Grupo 3"
+output:
+  #pdf_document: default
+  #word_document: default
+  html_document: default
+header-includes: null
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r item 1, results = 'hide', message=FALSE}
+#install.packages(c('ggplot2', 'plyr', 'dplyr', 'lubridate', 'stringr', 'tidyverse', 
+#                   'sf', 'mapview', 'tidymodels', 'themis', 'workflows', 'randomForest'))
+
+library(ggplot2);library(plyr);library(dplyr);library(lubridate);library(stringr);library(tidyverse);library(sf);library(mapview)
+```
+
+Os pacotes declarados serão utilizados para manipulação das bases e visualização, tanto em formatos tradicionais quanto em mapas. Abaixo, a base é importada e, após tratamento de datas e outros campos, a variável resposta é criada com base no período de ocorrência do crime. Vemos também a distribuição das categorias desta variável, além de seus valores mínimos e máximos para checar a consistência de horário.
+
+```{r item 2}
+df <- read.csv('RDO_3.csv')
+df$DATA_OCORRENCIA_BO <- as.Date(df$DATA_OCORRENCIA_BO,format="%d/%m/%Y")
+df$HORA_OCORRENCIA_BO <- hour(strptime(x = df$HORA_OCORRENCIA_BO, format = "%H:%M"))
+df$IDADE_PESSOA <- as.numeric(df$IDADE_PESSOA)
+df <- df[!(is.na(df$HORA_OCORRENCIA_BO) | df$HORA_OCORRENCIA_BO==""), ]
+df <- df[(is.na(df$X) | df$X==""), ]
+
+df$target <- cut(df$HORA_OCORRENCIA_BO, 
+                 breaks = c(-0.5, 5.5, 11.5, 17.5, 23.5), 
+                 labels = c('4.Madrugada', '1.Manhã', '2.Tarde', '3.Noite'))
+df$target %>% summary()
+
+tapply(df$HORA_OCORRENCIA_BO, df$target, min)
+tapply(df$HORA_OCORRENCIA_BO, df$target, max)
+```
+
+Abaixo, são tratadas as variáveis que indicam a localização do crime e é construída uma visualização de uma amostra dos registros.
+
+```{r item 3, results='hide', message=FALSE}
+df$LATITUDE <- as.numeric(df$LATITUDE)
+df$LONGITUDE <- as.numeric(df$LONGITUDE)
+
+locations_df <- df[,c('LATITUDE', 'LONGITUDE', 'target')]
+locations_df <- locations_df[!(is.na(df$LATITUDE)), ]
+locations <- as_tibble(locations_df)
+locations_sf <- sf::st_as_sf(locations, coords = c("LONGITUDE", "LATITUDE"), crs = 4326)
+
+set.seed(10); #mapview::mapview(sample_n(locations_sf, 200))
+```
+
+A porção abaixo traz a preparação final das bases de modelagem. Uma amostra de 50 mil observações é considerada para, posteriormente, dividi-la em 70% para ajuste do modelo e 30% para cálculo de métricas out-of-sample. São também selecionadas as variáveis explicativas que serão inseridas no modelo.
+Para evitar o problema de bisbilhotagem dos dados visto em aula, os mais diversos tratamentos (como 'dummyzação' e recategorização das variáveis categóricas, reamostragem da base para balanceamento de classes) são construídos a partir da base de treinamento e apenas aplicados na base de teste.
+
+```{r item 4, results = 'hide', message=FALSE}
+
+library(tidymodels);library(themis);library(parsnip);library(workflows);library(randomForest); library(glmnet); library(class)
+```
+
+```{r item 5}
+df_model <- df[,c(#'NUM_BO', 
+  'target', 'LATITUDE', 'LONGITUDE', 'COR_CUTIS', 'SEXO_PESSOA',
+  'FLAG_VITIMA_FATAL', 'DESCR_TIPO_PESSOA', 'RUBRICA','DESCR_TIPOLOCAL')]
+df_model <- df_model[!(is.na(df$LATITUDE)), ]
+df_model <- sample_n(df_model, 50000)
+crime_split <- initial_split(df_model, prop = 0.7)
+crime_split
+
+crime_rec <- training(crime_split) %>%
+  recipe(target ~ ., data = df_model) %>%
+  #update_role(NUM_BO, new_role = "Id") %>%
+  step_other(DESCR_TIPOLOCAL, RUBRICA, DESCR_TIPO_PESSOA) %>%
+  step_dummy(COR_CUTIS, SEXO_PESSOA,FLAG_VITIMA_FATAL,
+             DESCR_TIPO_PESSOA, RUBRICA, DESCR_TIPOLOCAL) %>%
+  step_zv(all_predictors()) %>%
+  #step_normalize(all_predictors()) %>%
+  step_smote(target) %>%
+  prep()
+
+crime_testing <- crime_rec %>%
+  bake(testing(crime_split))
+
+crime_training <- juice(crime_rec)
+```
+
+Daqui em diante, serão apresentados os algoritmos utilizados e seus respectivos resultados, com destaque para a acurácia como principal métrica utilizada. Trazemos também a proporção de cada classe na estimação do modelo e gráficos AUC-ROC, para verificar se o acerto do modelo pode estar concentrado em alguma categoria (por exemplo, não queremos um modelo que sempre forneça uma determinada classe de horário como previsão).
+
+Começando com a Random Forest, vemos que a acurácia está em torno de 36%, tanto na base de desenvolvimento quanto de teste. O parâmetro de mínimo de observações por folha definido em 20 contribui para que não haja overfitting no ajuste do modelo. Além da acurácia, as curvas ROC indicam que o acerto não é tão diferente entre as classes, e as proporções da saída do modelo estão em equilíbrio.
+
+```{r item Rforest}
+crime_rf <- rand_forest(trees = 100, min_n = 20) %>%  set_mode("classification") %>%  set_engine("randomForest") %>%  fit(target ~ ., data = crime_training)
+crime_rf %>%  predict(crime_training) %>%  bind_cols(crime_training) %>% metrics(truth = target, estimate = .pred_class)
+crime_rf %>%  predict(crime_testing) %>%  bind_cols(crime_testing) %>% metrics(truth = target, estimate = .pred_class)
+
+crime_probs_rf <- crime_rf %>% predict(crime_testing, type = "prob") %>% bind_cols(crime_testing)
+colnames(crime_probs_rf) <- c('pred4', 'pred1', 'pred2', 'pred3', colnames(crime_probs_rf[5:26]))
+crime_probs_rf %>%  roc_curve(target, pred4:pred3) %>%  autoplot()
+
+crime_class_predict_rf <- crime_rf %>%  predict(crime_testing, type = "class") %>%  bind_cols(crime_testing)
+crime_class_predict_rf$.pred_class %>% table %>% prop.table
+```
+
+Partindo para a regressão logística multinomial, obtemos resultados piores em termos de acerto, verificando-se uma queda de aproximadamente 4%. As demais conclusões são semelhantes às obtidas através da Random Forest - assim, concluímos que a Random Forest performou melhor na comparação.
+
+```{r item Regressao} 
+penalty = 0
+crime_reg <- multinom_reg(penalty = penalty) %>% set_engine("glmnet") %>% set_mode("classification") %>% fit(target ~ ., data = crime_training)
+crime_reg %>%  predict(crime_training, penalty = penalty) %>%  bind_cols(crime_training) %>% metrics(truth = target, estimate = .pred_class)
+crime_reg %>%  predict(crime_testing, penalty = penalty) %>%  bind_cols(crime_testing) %>% metrics(truth = target, estimate = .pred_class)
+
+crime_probs_reg <- crime_reg %>% predict(crime_testing, penalty = penalty, type = 'prob') %>% bind_cols(crime_testing)
+colnames(crime_probs_reg) <- c('pred4', 'pred1', 'pred2', 'pred3', colnames(crime_probs_reg[5:26]))
+crime_probs_reg %>%  roc_curve(target, pred4:pred3) %>%  autoplot()
+
+crime_class_predict_reg <- crime_reg %>%  predict(crime_testing, penalty = penalty, type = "class") %>%  bind_cols(crime_testing)
+crime_class_predict_reg$.pred_class %>% table %>% prop.table
+```
+
+Considerando as características de geolocalização dos dados (em especial as variáveis de longitude e latitude), o uso da técnica de vizinhos mais próximos (KNN) pode fornecer interpretações e resultados interessantes. O ajuste aos dados realizado abaixo indica que o método traz um ganho considerável em relação aos até então descritos, com uma acurácia maior que 50%. 
+
+```{r item knn}
+knn_train_predict <- class::knn(train=as.matrix(dplyr::select(crime_training, -c(target))),
+                                test= as.matrix(dplyr::select(crime_training, -c(target))),
+                                cl =  as.matrix(dplyr::select(crime_training,  c(target))),
+                                k = 5)
+
+knn_test_predict <- class::knn(train=as.matrix(dplyr::select(crime_training, -c(target))),
+                               test= as.matrix(dplyr::select(crime_testing, -c(target))),
+                               cl = as.matrix(dplyr::select(crime_training, c(target))),
+                               k = 5)
+
+crime_training$acerto <- (crime_training$target == knn_train_predict)
+crime_training$acerto %>% table %>% prop.table
+crime_testing$acerto <- (crime_testing$target == knn_test_predict)
+crime_testing$acerto %>% table %>% prop.table
+crime_testing <- crime_testing[, -23]
+crime_training <- crime_training[, -23]
+``` 
