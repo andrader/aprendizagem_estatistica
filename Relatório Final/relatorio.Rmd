@@ -12,6 +12,7 @@ header-includes: null
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Introdução 
 
 ```{r item 1, results = 'hide', message=FALSE}
 #install.packages(c('ggplot2', 'plyr', 'dplyr', 'lubridate', 'stringr', 'tidyverse', 
@@ -140,3 +141,8 @@ crime_testing$acerto %>% table %>% prop.table
 crime_testing <- crime_testing[, -23]
 crime_training <- crime_training[, -23]
 ``` 
+
+  Outro modelo de machine learning foi proposto para a modelagem do nosso problema. O xgboost é um método baseado em árvores e  este modelo foi proposto em 2016 no paper "Xgboost: A Scalable Tree Boosting System". Para tunarmos os parâmetros do modelo separamos a amostra de treino em duas, a fim de escolhermos o melhor conjunto de parâmetros para o nosso mmodelo. Assim sendo, mesmo com os parâmetros escolhidos baseados em um grid não foi possível alcançar uma acurácia melhor do que a do KNN. Mostrando desta forma o cometimento do problema de data snopping quando este modelo foi apresentado em aula.
+
+
+```
