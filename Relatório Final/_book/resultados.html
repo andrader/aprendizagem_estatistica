@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Resultados | Criminalidade em São Paulo</title>
+  <meta name="description" content="relatório produzido para a disciplina Aprendizagem Estatística em Altas Dimensões." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Resultados | Criminalidade em São Paulo" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="relatório produzido para a disciplina Aprendizagem Estatística em Altas Dimensões." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Resultados | Criminalidade em São Paulo" />
+  
+  <meta name="twitter:description" content="relatório produzido para a disciplina Aprendizagem Estatística em Altas Dimensões." />
+  
+
+<meta name="author" content="Grupo 3" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="knn.html"/>
+<link rel="next" href="conclusao.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Aprendizagem Estatística</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Sobre este documento</a></li>
+<li class="chapter" data-level="1" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i><b>1</b> Introdução</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introducao.html"><a href="introducao.html#objetivo"><i class="fa fa-check"></i><b>1.1</b> Objetivo</a></li>
+<li class="chapter" data-level="1.2" data-path="introducao.html"><a href="introducao.html#questões-norteadoras"><i class="fa fa-check"></i><b>1.2</b> Questões Norteadoras</a></li>
+<li class="chapter" data-level="1.3" data-path="introducao.html"><a href="introducao.html#organização-do-trabalho"><i class="fa fa-check"></i><b>1.3</b> Organização do trabalho</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="metodologia.html"><a href="metodologia.html"><i class="fa fa-check"></i><b>2</b> Metodologia</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="metodologia.html"><a href="metodologia.html#fonte-dos-dados"><i class="fa fa-check"></i><b>2.1</b> Fonte dos dados</a></li>
+<li class="chapter" data-level="2.2" data-path="metodologia.html"><a href="metodologia.html#filtros-de-escopo-e-tratamento-dos-dados"><i class="fa fa-check"></i><b>2.2</b> Filtros de escopo e tratamento dos dados</a></li>
+<li class="chapter" data-level="2.3" data-path="metodologia.html"><a href="metodologia.html#métodos-utilizados"><i class="fa fa-check"></i><b>2.3</b> Métodos utilizados</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="knn.html"><a href="knn.html"><i class="fa fa-check"></i><b>3</b> KNN</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="knn.html"><a href="knn.html#random-forest"><i class="fa fa-check"></i><b>3.0.1</b> Random Forest</a></li>
+<li class="chapter" data-level="3.0.2" data-path="knn.html"><a href="knn.html#xgboost"><i class="fa fa-check"></i><b>3.0.2</b> XGBoost</a></li>
+<li class="chapter" data-level="3.1" data-path="knn.html"><a href="knn.html#preparação-para-modelagem"><i class="fa fa-check"></i><b>3.1</b> Preparação para modelagem</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="resultados.html"><a href="resultados.html"><i class="fa fa-check"></i><b>4</b> Resultados</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="resultados.html"><a href="resultados.html#descritiva"><i class="fa fa-check"></i><b>4.1</b> Análise descritiva</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="resultados.html"><a href="resultados.html#tipo-de-local-da-ocorrência"><i class="fa fa-check"></i><b>4.1.1</b> Tipo de local da ocorrência</a></li>
+<li class="chapter" data-level="4.1.2" data-path="resultados.html"><a href="resultados.html#localização"><i class="fa fa-check"></i><b>4.1.2</b> Localização</a></li>
+<li class="chapter" data-level="4.1.3" data-path="resultados.html"><a href="resultados.html#sexo-e-idade-das-vítimas"><i class="fa fa-check"></i><b>4.1.3</b> Sexo e idade das vítimas</a></li>
+<li class="chapter" data-level="4.1.4" data-path="resultados.html"><a href="resultados.html#tipificação"><i class="fa fa-check"></i><b>4.1.4</b> Tipificação</a></li>
+<li class="chapter" data-level="4.1.5" data-path="resultados.html"><a href="resultados.html#distribuição-da-idade-por-cor"><i class="fa fa-check"></i><b>4.1.5</b> Distribuição da idade por cor</a></li>
+<li class="chapter" data-level="4.1.6" data-path="resultados.html"><a href="resultados.html#vítimas-fatais"><i class="fa fa-check"></i><b>4.1.6</b> Vítimas fatais</a></li>
+<li class="chapter" data-level="4.1.7" data-path="resultados.html"><a href="resultados.html#horário-e-dia-da-semana"><i class="fa fa-check"></i><b>4.1.7</b> Horário e dia da semana</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="resultados.html"><a href="resultados.html#random-forest-1"><i class="fa fa-check"></i><b>4.2</b> Random Forest</a></li>
+<li class="chapter" data-level="4.3" data-path="resultados.html"><a href="resultados.html#regressão-logística-multinomial"><i class="fa fa-check"></i><b>4.3</b> Regressão Logística Multinomial</a></li>
+<li class="chapter" data-level="4.4" data-path="resultados.html"><a href="resultados.html#vizinhos-mais-próximos-knn"><i class="fa fa-check"></i><b>4.4</b> Vizinhos mais próximos (KNN)</a></li>
+<li class="chapter" data-level="4.5" data-path="resultados.html"><a href="resultados.html#xgboost-1"><i class="fa fa-check"></i><b>4.5</b> XGBoost</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="conclusao.html"><a href="conclusao.html"><i class="fa fa-check"></i><b>5</b> Conclusão</a></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Criminalidade em São Paulo</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="resultados" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Resultados</h1>
+<p>No Capítulo <a href="metodologia.html#metodologia">2</a>, foram apresentados todos os detalhes dos dados e da metodologia utilizada na análise dos boletins de ocorrência. Neste capítulo, além de uma breve análise descritiva da base completa, serão apresentados os algoritmos utilizados e seus respectivos resultados, com destaque para a acurácia como principal métrica. Trazemos também a proporção de cada classe na estimação do modelo e gráficos AUC-ROC, para verificar se o acerto do modelo pode estar concentrado em alguma categoria (por exemplo, não queremos um modelo que sempre forneça uma determinada classe de horário como previsão).</p>
+<div id="descritiva" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Análise descritiva</h2>
+<div id="tipo-de-local-da-ocorrência" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Tipo de local da ocorrência</h3>
+<p>O tipo de local mais comum dos crimes são vias públicas, que representa quase 60% de todos os boletins registrados na base.</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.svg" width="960" /></p>
+</div>
+<div id="localização" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Localização</h3>
+<p>A seguir vemos como as ocorrências se distribuem geograficamente por São Paulo, com grande concentração na região central da cidade.</p>
+<pre><code>FALSE 
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |======================================================================| 100%
+FALSE 
+Downloading: 1.6 kB     
+Downloading: 1.6 kB     
+Downloading: 1.7 kB     
+Downloading: 1.7 kB     
+Downloading: 1.8 kB     
+Downloading: 1.8 kB     
+Downloading: 1.8 kB     
+Downloading: 1.8 kB     
+Downloading: 1.9 kB     
+Downloading: 1.9 kB     
+Downloading: 2 kB     
+Downloading: 2 kB     
+Downloading: 2 kB     
+Downloading: 2 kB     
+Downloading: 2 kB     
+Downloading: 2 kB     
+Downloading: 2.7 kB     
+Downloading: 2.7 kB     
+Downloading: 3.7 kB     
+Downloading: 3.7 kB     
+Downloading: 3.7 kB     
+Downloading: 3.7 kB     
+Downloading: 3.7 kB     
+Downloading: 3.7 kB     
+Downloading: 3.7 kB     
+Downloading: 3.7 kB     
+Downloading: 12 kB     
+Downloading: 12 kB     
+Downloading: 12 kB     
+Downloading: 12 kB     
+Downloading: 12 kB     
+Downloading: 12 kB     
+Downloading: 20 kB     
+Downloading: 20 kB     
+Downloading: 20 kB     
+Downloading: 20 kB     
+Downloading: 20 kB     
+Downloading: 20 kB     
+Downloading: 20 kB     
+Downloading: 20 kB     
+Downloading: 20 kB     
+Downloading: 20 kB     
+Downloading: 28 kB     
+Downloading: 28 kB     
+Downloading: 28 kB     
+Downloading: 28 kB     
+Downloading: 28 kB     
+Downloading: 28 kB     
+Downloading: 28 kB     
+Downloading: 28 kB     
+Downloading: 28 kB     
+Downloading: 28 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 36 kB     
+Downloading: 44 kB     
+Downloading: 44 kB     
+Downloading: 44 kB     
+Downloading: 44 kB     
+Downloading: 44 kB     
+Downloading: 44 kB     
+Downloading: 44 kB     
+Downloading: 44 kB     
+Downloading: 44 kB     
+Downloading: 44 kB     
+Downloading: 52 kB     
+Downloading: 52 kB     
+Downloading: 52 kB     
+Downloading: 52 kB     
+Downloading: 52 kB     
+Downloading: 52 kB     
+Downloading: 52 kB     
+Downloading: 52 kB     
+Downloading: 60 kB     
+Downloading: 60 kB     
+Downloading: 60 kB     
+Downloading: 60 kB     
+Downloading: 60 kB     
+Downloading: 60 kB     
+Downloading: 60 kB     
+Downloading: 60 kB     
+Downloading: 68 kB     
+Downloading: 68 kB     
+Downloading: 68 kB     
+Downloading: 68 kB     
+Downloading: 68 kB     
+Downloading: 68 kB     
+Downloading: 68 kB     
+Downloading: 68 kB     
+Downloading: 77 kB     
+Downloading: 77 kB     
+Downloading: 77 kB     
+Downloading: 77 kB     
+Downloading: 77 kB     
+Downloading: 77 kB     
+Downloading: 77 kB     
+Downloading: 77 kB     
+Downloading: 77 kB     
+Downloading: 77 kB     
+Downloading: 85 kB     
+Downloading: 85 kB     
+Downloading: 85 kB     
+Downloading: 85 kB     
+Downloading: 85 kB     
+Downloading: 85 kB     
+Downloading: 93 kB     
+Downloading: 93 kB     
+Downloading: 93 kB     
+Downloading: 93 kB     
+Downloading: 93 kB     
+Downloading: 93 kB     
+Downloading: 93 kB     
+Downloading: 93 kB     
+Downloading: 93 kB     
+Downloading: 93 kB     
+Downloading: 100 kB     
+Downloading: 100 kB     
+Downloading: 100 kB     
+Downloading: 100 kB     
+Downloading: 100 kB     
+Downloading: 100 kB     
+Downloading: 110 kB     
+Downloading: 110 kB     
+Downloading: 110 kB     
+Downloading: 110 kB     
+Downloading: 110 kB     
+Downloading: 110 kB     
+Downloading: 110 kB     
+Downloading: 110 kB     
+Downloading: 120 kB     
+Downloading: 120 kB     
+Downloading: 120 kB     
+Downloading: 120 kB     
+Downloading: 120 kB     
+Downloading: 120 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 130 kB     
+Downloading: 140 kB     
+Downloading: 140 kB     
+Downloading: 140 kB     
+Downloading: 140 kB     
+Downloading: 140 kB     
+Downloading: 140 kB     
+Downloading: 150 kB     
+Downloading: 150 kB     
+Downloading: 150 kB     
+Downloading: 150 kB     
+Downloading: 150 kB     
+Downloading: 150 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 160 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 170 kB     
+Downloading: 180 kB     
+Downloading: 180 kB     
+Downloading: 180 kB     
+Downloading: 180 kB     
+Downloading: 180 kB     
+Downloading: 180 kB     
+Downloading: 180 kB     
+Downloading: 180 kB     
+Downloading: 190 kB     
+Downloading: 190 kB     
+Downloading: 190 kB     
+Downloading: 190 kB     
+Downloading: 190 kB     
+Downloading: 190 kB     
+Downloading: 190 kB     
+Downloading: 190 kB     
+Downloading: 200 kB     
+Downloading: 200 kB     
+Downloading: 200 kB     
+Downloading: 200 kB     
+Downloading: 200 kB     
+Downloading: 200 kB     
+Downloading: 200 kB     
+Downloading: 200 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 210 kB     
+Downloading: 220 kB     
+Downloading: 220 kB     
+Downloading: 220 kB     
+Downloading: 220 kB     
+Downloading: 220 kB     
+Downloading: 220 kB     
+Downloading: 220 kB     
+Downloading: 220 kB     
+Downloading: 230 kB     
+Downloading: 230 kB     
+Downloading: 230 kB     
+Downloading: 230 kB     
+Downloading: 230 kB     
+Downloading: 230 kB     
+Downloading: 230 kB     
+Downloading: 230 kB     
+Downloading: 230 kB     
+Downloading: 230 kB     
+Downloading: 240 kB     
+Downloading: 240 kB     
+Downloading: 240 kB     
+Downloading: 240 kB     
+Downloading: 240 kB     
+Downloading: 240 kB     
+Downloading: 240 kB     
+Downloading: 240 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 250 kB     
+Downloading: 260 kB     
+Downloading: 260 kB     
+Downloading: 260 kB     
+Downloading: 260 kB     
+Downloading: 260 kB     
+Downloading: 260 kB     
+Downloading: 260 kB     
+Downloading: 260 kB     
+Downloading: 270 kB     
+Downloading: 270 kB     
+Downloading: 270 kB     
+Downloading: 270 kB     
+Downloading: 270 kB     
+Downloading: 270 kB     
+Downloading: 280 kB     
+Downloading: 280 kB     
+Downloading: 280 kB     
+Downloading: 280 kB     
+Downloading: 280 kB     
+Downloading: 280 kB     
+Downloading: 280 kB     
+Downloading: 280 kB     
+Downloading: 290 kB     
+Downloading: 290 kB     
+Downloading: 290 kB     
+Downloading: 290 kB     
+Downloading: 290 kB     
+Downloading: 290 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 300 kB     
+Downloading: 310 kB     
+Downloading: 310 kB     
+Downloading: 310 kB     
+Downloading: 310 kB     
+Downloading: 310 kB     
+Downloading: 310 kB     
+Downloading: 310 kB     
+Downloading: 310 kB     
+Downloading: 320 kB     
+Downloading: 320 kB     
+Downloading: 320 kB     
+Downloading: 320 kB     
+Downloading: 320 kB     
+Downloading: 320 kB     
+Downloading: 320 kB     
+Downloading: 320 kB     
+Downloading: 320 kB     
+Downloading: 320 kB     
+Downloading: 330 kB     
+Downloading: 330 kB     
+Downloading: 330 kB     
+Downloading: 330 kB     
+Downloading: 330 kB     
+Downloading: 330 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 340 kB     
+Downloading: 350 kB     
+Downloading: 350 kB     
+Downloading: 350 kB     
+Downloading: 350 kB     
+Downloading: 350 kB     
+Downloading: 350 kB     
+Downloading: 350 kB     
+Downloading: 350 kB     
+Downloading: 350 kB     
+Downloading: 350 kB     
+Downloading: 360 kB     
+Downloading: 360 kB     
+Downloading: 360 kB     
+Downloading: 360 kB     
+Downloading: 360 kB     
+Downloading: 360 kB     
+Downloading: 370 kB     
+Downloading: 370 kB     
+Downloading: 370 kB     
+Downloading: 370 kB     
+Downloading: 370 kB     
+Downloading: 370 kB     
+Downloading: 370 kB     
+Downloading: 370 kB     
+Downloading: 370 kB     
+Downloading: 370 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 380 kB     
+Downloading: 390 kB     
+Downloading: 390 kB     
+Downloading: 390 kB     
+Downloading: 390 kB     
+Downloading: 390 kB     
+Downloading: 390 kB     
+Downloading: 390 kB     
+Downloading: 390 kB     
+Downloading: 390 kB     
+Downloading: 390 kB     
+Downloading: 400 kB     
+Downloading: 400 kB     
+Downloading: 400 kB     
+Downloading: 400 kB     
+Downloading: 400 kB     
+Downloading: 400 kB     
+Downloading: 400 kB     
+Downloading: 400 kB     
+Downloading: 400 kB     
+Downloading: 400 kB     
+Downloading: 410 kB     
+Downloading: 410 kB     
+Downloading: 410 kB     
+Downloading: 410 kB     
+Downloading: 410 kB     
+Downloading: 410 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 420 kB     
+Downloading: 430 kB     
+Downloading: 430 kB     
+Downloading: 430 kB     
+Downloading: 430 kB     
+Downloading: 430 kB     
+Downloading: 430 kB     
+Downloading: 440 kB     
+Downloading: 440 kB     
+Downloading: 440 kB     
+Downloading: 440 kB     
+Downloading: 440 kB     
+Downloading: 440 kB     
+Downloading: 450 kB     
+Downloading: 450 kB     
+Downloading: 450 kB     
+Downloading: 450 kB     
+Downloading: 450 kB     
+Downloading: 450 kB     
+Downloading: 460 kB     
+Downloading: 460 kB     
+Downloading: 460 kB     
+Downloading: 460 kB     
+Downloading: 460 kB     
+Downloading: 460 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 470 kB     
+Downloading: 480 kB     
+Downloading: 480 kB     
+Downloading: 480 kB     
+Downloading: 480 kB     
+Downloading: 480 kB     
+Downloading: 480 kB     
+Downloading: 480 kB     
+Downloading: 480 kB     
+Downloading: 480 kB     
+Downloading: 480 kB     
+Downloading: 490 kB     
+Downloading: 490 kB     
+Downloading: 490 kB     
+Downloading: 490 kB     
+Downloading: 490 kB     
+Downloading: 490 kB     
+Downloading: 490 kB     
+Downloading: 490 kB     
+Downloading: 500 kB     
+Downloading: 500 kB     
+Downloading: 500 kB     
+Downloading: 500 kB     
+Downloading: 500 kB     
+Downloading: 500 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 510 kB     
+Downloading: 520 kB     
+Downloading: 520 kB     
+Downloading: 520 kB     
+Downloading: 520 kB     
+Downloading: 520 kB     
+Downloading: 520 kB     
+Downloading: 520 kB     
+Downloading: 520 kB     
+Downloading: 530 kB     
+Downloading: 530 kB     
+Downloading: 530 kB     
+Downloading: 530 kB     
+Downloading: 530 kB     
+Downloading: 530 kB     
+Downloading: 530 kB     
+Downloading: 530 kB     
+Downloading: 540 kB     
+Downloading: 540 kB     
+Downloading: 540 kB     
+Downloading: 540 kB     
+Downloading: 540 kB     
+Downloading: 540 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 550 kB     
+Downloading: 560 kB     
+Downloading: 560 kB     
+Downloading: 560 kB     
+Downloading: 560 kB     
+Downloading: 560 kB     
+Downloading: 560 kB     
+Downloading: 560 kB     
+Downloading: 560 kB     
+Downloading: 560 kB     
+Downloading: 560 kB     
+Downloading: 570 kB     
+Downloading: 570 kB     
+Downloading: 570 kB     
+Downloading: 570 kB     
+Downloading: 570 kB     
+Downloading: 570 kB     
+Downloading: 570 kB     
+Downloading: 570 kB     
+Downloading: 580 kB     
+Downloading: 580 kB     
+Downloading: 580 kB     
+Downloading: 580 kB     
+Downloading: 580 kB     
+Downloading: 580 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 590 kB     
+Downloading: 600 kB     
+Downloading: 600 kB     
+Downloading: 600 kB     
+Downloading: 600 kB     
+Downloading: 600 kB     
+Downloading: 600 kB     
+Downloading: 600 kB     
+Downloading: 600 kB     
+Downloading: 610 kB     
+Downloading: 610 kB     
+Downloading: 610 kB     
+Downloading: 610 kB     
+Downloading: 610 kB     
+Downloading: 610 kB     
+Downloading: 620 kB     
+Downloading: 620 kB     
+Downloading: 620 kB     
+Downloading: 620 kB     
+Downloading: 620 kB     
+Downloading: 620 kB     
+Downloading: 620 kB     
+Downloading: 620 kB     
+Downloading: 630 kB     
+Downloading: 630 kB     
+Downloading: 630 kB     
+Downloading: 630 kB     
+Downloading: 630 kB     
+Downloading: 630 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 640 kB     
+Downloading: 650 kB     
+Downloading: 650 kB     
+Downloading: 650 kB     
+Downloading: 650 kB     
+Downloading: 650 kB     
+Downloading: 650 kB     
+Downloading: 660 kB     
+Downloading: 660 kB     
+Downloading: 660 kB     
+Downloading: 660 kB     
+Downloading: 660 kB     
+Downloading: 660 kB     
+Downloading: 670 kB     
+Downloading: 670 kB     
+Downloading: 670 kB     
+Downloading: 670 kB     
+Downloading: 670 kB     
+Downloading: 670 kB     
+Downloading: 670 kB     
+Downloading: 670 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 680 kB     
+Downloading: 690 kB     
+Downloading: 690 kB     
+Downloading: 690 kB     
+Downloading: 690 kB     
+Downloading: 690 kB     
+Downloading: 690 kB     
+Downloading: 700 kB     
+Downloading: 700 kB     
+Downloading: 700 kB     
+Downloading: 700 kB     
+Downloading: 700 kB     
+Downloading: 700 kB     
+Downloading: 710 kB     
+Downloading: 710 kB     
+Downloading: 710 kB     
+Downloading: 710 kB     
+Downloading: 710 kB     
+Downloading: 710 kB     
+Downloading: 710 kB     
+Downloading: 710 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 720 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 730 kB     
+Downloading: 740 kB     
+Downloading: 740 kB     
+Downloading: 740 kB     
+Downloading: 740 kB     
+Downloading: 740 kB     
+Downloading: 740 kB     
+Downloading: 750 kB     
+Downloading: 750 kB     
+Downloading: 750 kB     
+Downloading: 750 kB     
+Downloading: 750 kB     
+Downloading: 750 kB     
+Downloading: 750 kB     
+Downloading: 750 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 760 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 770 kB     
+Downloading: 780 kB     
+Downloading: 780 kB     
+Downloading: 780 kB     
+Downloading: 780 kB     
+Downloading: 780 kB     
+Downloading: 780 kB     
+Downloading: 790 kB     
+Downloading: 790 kB     
+Downloading: 790 kB     
+Downloading: 790 kB     
+Downloading: 790 kB     
+Downloading: 790 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 800 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 810 kB     
+Downloading: 820 kB     
+Downloading: 820 kB     
+Downloading: 820 kB     
+Downloading: 820 kB     
+Downloading: 820 kB     
+Downloading: 820 kB     
+Downloading: 830 kB     
+Downloading: 830 kB     
+Downloading: 830 kB     
+Downloading: 830 kB     
+Downloading: 830 kB     
+Downloading: 830 kB     
+Downloading: 840 kB     
+Downloading: 840 kB     
+Downloading: 840 kB     
+Downloading: 840 kB     
+Downloading: 840 kB     
+Downloading: 840 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 850 kB     
+Downloading: 860 kB     
+Downloading: 860 kB     
+Downloading: 860 kB     
+Downloading: 860 kB     
+Downloading: 860 kB     
+Downloading: 860 kB     
+Downloading: 870 kB     
+Downloading: 870 kB     
+Downloading: 870 kB     
+Downloading: 870 kB     
+Downloading: 870 kB     
+Downloading: 870 kB     
+Downloading: 880 kB     
+Downloading: 880 kB     
+Downloading: 880 kB     
+Downloading: 880 kB     
+Downloading: 880 kB     
+Downloading: 880 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 890 kB     
+Downloading: 900 kB     
+Downloading: 900 kB     
+Downloading: 900 kB     
+Downloading: 900 kB     
+Downloading: 900 kB     
+Downloading: 900 kB     
+Downloading: 910 kB     
+Downloading: 910 kB     
+Downloading: 910 kB     
+Downloading: 910 kB     
+Downloading: 910 kB     
+Downloading: 910 kB     
+Downloading: 920 kB     
+Downloading: 920 kB     
+Downloading: 920 kB     
+Downloading: 920 kB     
+Downloading: 920 kB     
+Downloading: 920 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 930 kB     
+Downloading: 940 kB     
+Downloading: 940 kB     
+Downloading: 940 kB     
+Downloading: 940 kB     
+Downloading: 940 kB     
+Downloading: 940 kB     
+Downloading: 950 kB     
+Downloading: 950 kB     
+Downloading: 950 kB     
+Downloading: 950 kB     
+Downloading: 950 kB     
+Downloading: 950 kB     
+Downloading: 960 kB     
+Downloading: 960 kB     
+Downloading: 960 kB     
+Downloading: 960 kB     
+Downloading: 960 kB     
+Downloading: 960 kB     
+Downloading: 970 kB     
+Downloading: 970 kB     
+Downloading: 970 kB     
+Downloading: 970 kB     
+Downloading: 970 kB     
+Downloading: 970 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 980 kB     
+Downloading: 990 kB     
+Downloading: 990 kB     
+Downloading: 990 kB     
+Downloading: 990 kB     
+Downloading: 990 kB     
+Downloading: 990 kB     
+Downloading: 990 kB     
+Downloading: 990 kB     
+Downloading: 1,000 kB     
+Downloading: 1,000 kB     
+Downloading: 1,000 kB     
+Downloading: 1,000 kB     
+Downloading: 1,000 kB     
+Downloading: 1,000 kB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.1 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.2 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.3 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB     
+Downloading: 1.4 MB</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.svg" width="960" /></p>
+</div>
+<div id="sexo-e-idade-das-vítimas" class="section level3" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Sexo e idade das vítimas</h3>
+<p><img src="_main_files/figure-html/unnamed-chunk-9-1.svg" width="960" /><img src="_main_files/figure-html/unnamed-chunk-9-2.svg" width="960" /></p>
+</div>
+<div id="tipificação" class="section level3" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Tipificação</h3>
+<p><img src="_main_files/figure-html/unnamed-chunk-10-1.svg" width="960" /></p>
+</div>
+<div id="distribuição-da-idade-por-cor" class="section level3" number="4.1.5">
+<h3><span class="header-section-number">4.1.5</span> Distribuição da idade por cor</h3>
+<p><img src="_main_files/figure-html/unnamed-chunk-11-1.svg" width="960" /></p>
+</div>
+<div id="vítimas-fatais" class="section level3" number="4.1.6">
+<h3><span class="header-section-number">4.1.6</span> Vítimas fatais</h3>
+<p><img src="_main_files/figure-html/unnamed-chunk-12-1.svg" width="960" /></p>
+</div>
+<div id="horário-e-dia-da-semana" class="section level3" number="4.1.7">
+<h3><span class="header-section-number">4.1.7</span> Horário e dia da semana</h3>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.svg" width="960" /></p>
+</div>
+</div>
+<div id="random-forest-1" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Random Forest</h2>
+<p>Avaliando os métodos, e começando com a Random Forest, vemos que a acurácia está em torno de 36%, tanto na base de desenvolvimento quanto de teste. O parâmetro de mínimo de observações por folha definido em 20 contribui para que não haja overfitting no ajuste do modelo. Além da acurácia, as curvas ROC indicam que o acerto não é tão diferente entre as classes, e as proporções da saída do modelo estão em equilíbrio.</p>
+<pre><code>FALSE # A tibble: 2 x 3
+FALSE   .metric  .estimator .estimate
+FALSE   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;
+FALSE 1 accuracy multiclass     0.360
+FALSE 2 kap      multiclass     0.147</code></pre>
+<pre><code>FALSE # A tibble: 2 x 3
+FALSE   .metric  .estimator .estimate
+FALSE   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;
+FALSE 1 accuracy multiclass     0.363
+FALSE 2 kap      multiclass     0.142</code></pre>
+<p><img src="_main_files/figure-html/item%20Rforest-1.svg" width="864" /></p>
+<pre><code>FALSE .
+FALSE 4.Madrugada     1.Manhã     2.Tarde     3.Noite 
+FALSE   0.3212000   0.0358000   0.3018667   0.3411333</code></pre>
+<p>A imagem abaixo traz uma representação gráfica da proporção de acertos e erros em uma amostra selecionada, levando em conta a distribuição espacial dos dados.</p>
+<div class="figure">
+<img src="assets/img/output_rf_viz.jpeg" alt="" />
+<p class="caption">Resultados RF</p>
+</div>
+</div>
+<div id="regressão-logística-multinomial" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Regressão Logística Multinomial</h2>
+<p>Partindo para a regressão logística multinomial, obtemos resultados piores em termos de acerto, verificando-se uma queda de aproximadamente 4%. As demais conclusões são semelhantes às obtidas através da Random Forest - assim, concluímos que a Random Forest performou melhor na comparação.</p>
+<pre><code>FALSE # A tibble: 2 x 3
+FALSE   .metric  .estimator .estimate
+FALSE   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;
+FALSE 1 accuracy multiclass     0.328
+FALSE 2 kap      multiclass     0.104</code></pre>
+<pre><code>FALSE # A tibble: 2 x 3
+FALSE   .metric  .estimator .estimate
+FALSE   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;
+FALSE 1 accuracy multiclass     0.343
+FALSE 2 kap      multiclass     0.110</code></pre>
+<p><img src="_main_files/figure-html/item%20Regressao-1.svg" width="864" /></p>
+<pre><code>FALSE .
+FALSE 4.Madrugada     1.Manhã     2.Tarde     3.Noite 
+FALSE  0.29106667  0.04906667  0.31500000  0.34486667</code></pre>
+</div>
+<div id="vizinhos-mais-próximos-knn" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Vizinhos mais próximos (KNN)</h2>
+<p>Considerando as características de geolocalização dos dados (em especial as variáveis de longitude e latitude), o uso da técnica de vizinhos mais próximos (KNN) pode fornecer interpretações e resultados interessantes. O ajuste aos dados realizado abaixo indica que o método traz um ganho considerável em relação aos até então descritos, com uma acurácia maior que 50%.</p>
+<p>O ajuste da mesma técnica foi feito, também, utilizando apenas as duas variáveis espaciais; o resultado obtido também é interessante, pois resultou em acertos próximos a 50% mesmo com a redução das variáveis consideradas.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="resultados.html#cb9-1" aria-hidden="true" tabindex="-1"></a>knn_train_predict <span class="ot">&lt;-</span> class<span class="sc">::</span><span class="fu">knn</span>(<span class="at">train=</span><span class="fu">as.matrix</span>(dplyr<span class="sc">::</span><span class="fu">select</span>(crime_training, <span class="sc">-</span><span class="fu">c</span>(target))),</span>
+<span id="cb9-2"><a href="resultados.html#cb9-2" aria-hidden="true" tabindex="-1"></a>                               <span class="at">test=</span> <span class="fu">as.matrix</span>(dplyr<span class="sc">::</span><span class="fu">select</span>(crime_training, <span class="sc">-</span><span class="fu">c</span>(target))),</span>
+<span id="cb9-3"><a href="resultados.html#cb9-3" aria-hidden="true" tabindex="-1"></a>                               <span class="at">cl =</span>  <span class="fu">as.matrix</span>(dplyr<span class="sc">::</span><span class="fu">select</span>(crime_training,  <span class="fu">c</span>(target))),</span>
+<span id="cb9-4"><a href="resultados.html#cb9-4" aria-hidden="true" tabindex="-1"></a>                               <span class="at">k =</span> <span class="dv">5</span>)</span>
+<span id="cb9-5"><a href="resultados.html#cb9-5" aria-hidden="true" tabindex="-1"></a>knn_test_predict <span class="ot">&lt;-</span> class<span class="sc">::</span><span class="fu">knn</span>(<span class="at">train=</span><span class="fu">as.matrix</span>(dplyr<span class="sc">::</span><span class="fu">select</span>(crime_training, <span class="sc">-</span><span class="fu">c</span>(target))),</span>
+<span id="cb9-6"><a href="resultados.html#cb9-6" aria-hidden="true" tabindex="-1"></a>                              <span class="at">test=</span> <span class="fu">as.matrix</span>(dplyr<span class="sc">::</span><span class="fu">select</span>(crime_testing, <span class="sc">-</span><span class="fu">c</span>(target))),</span>
+<span id="cb9-7"><a href="resultados.html#cb9-7" aria-hidden="true" tabindex="-1"></a>                              <span class="at">cl =</span> <span class="fu">as.matrix</span>(dplyr<span class="sc">::</span><span class="fu">select</span>(crime_training, <span class="fu">c</span>(target))),</span>
+<span id="cb9-8"><a href="resultados.html#cb9-8" aria-hidden="true" tabindex="-1"></a>                              <span class="at">k =</span> <span class="dv">5</span>)</span>
+<span id="cb9-9"><a href="resultados.html#cb9-9" aria-hidden="true" tabindex="-1"></a>crime_training<span class="sc">$</span>acerto <span class="ot">&lt;-</span> (crime_training<span class="sc">$</span>target <span class="sc">==</span> knn_train_predict)</span>
+<span id="cb9-10"><a href="resultados.html#cb9-10" aria-hidden="true" tabindex="-1"></a>crime_training<span class="sc">$</span>acerto <span class="sc">%&gt;%</span> table <span class="sc">%&gt;%</span> prop.table</span>
+<span id="cb9-11"><a href="resultados.html#cb9-11" aria-hidden="true" tabindex="-1"></a>crime_testing<span class="sc">$</span>acerto <span class="ot">&lt;-</span> (crime_testing<span class="sc">$</span>target <span class="sc">==</span> knn_test_predict)</span>
+<span id="cb9-12"><a href="resultados.html#cb9-12" aria-hidden="true" tabindex="-1"></a>crime_testing<span class="sc">$</span>acerto <span class="sc">%&gt;%</span> table <span class="sc">%&gt;%</span> prop.table</span>
+<span id="cb9-13"><a href="resultados.html#cb9-13" aria-hidden="true" tabindex="-1"></a>crime_testing <span class="ot">&lt;-</span> crime_testing[, <span class="sc">-</span><span class="dv">23</span>]</span>
+<span id="cb9-14"><a href="resultados.html#cb9-14" aria-hidden="true" tabindex="-1"></a>crime_training <span class="ot">&lt;-</span> crime_training[, <span class="sc">-</span><span class="dv">23</span>]</span></code></pre></div>
+<pre><code>FALSE # A tibble: 2 x 2
+FALSE   .         n
+FALSE   &lt;chr&gt; &lt;dbl&gt;
+FALSE 1 FALSE 0.366
+FALSE 2 TRUE  0.634</code></pre>
+<pre><code>FALSE # A tibble: 2 x 2
+FALSE   .         n
+FALSE   &lt;chr&gt; &lt;dbl&gt;
+FALSE 1 FALSE 0.426
+FALSE 2 TRUE  0.574</code></pre>
+<div class="figure">
+<img src="assets/img/output_knn_viz.jpeg" alt="" />
+<p class="caption">Resultados KNN</p>
+</div>
+</div>
+<div id="xgboost-1" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> XGBoost</h2>
+<p>Outro modelo de machine learning foi proposto para a modelagem do nosso problema. O XGBoost é um método baseado em árvores e este modelo foi proposto em 2016 no paper “Xgboost: A Scalable Tree Boosting System.” Para tunarmos os parâmetros do modelo, separamos a amostra de treino em duas, a fim de escolhermos o melhor conjunto de parâmetros para o nosso modelo. Mesmo assim, com os parâmetros escolhidos baseados em um grid não foi possível alcançar uma acurácia melhor do que a do KNN para a base out-of-sample.</p>
+<pre><code>FALSE [1] &quot;Final Accuracy = 34.17%&quot;</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="knn.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusao.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/yihui/bookdown-crc/edit/master/03-resultados.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1217 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.14)  2 DEC 2020 02:25
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**relatorio_final.tex
+(./relatorio_final.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base
+/report.cls
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (/usr/share/texmf/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen135
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen136
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count176
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count177
+\leftroot@=\count178
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count179
+\DOTSCASE@=\count180
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count181
+\c@MaxMatrixCols=\count182
+\dotsspace@=\muskip16
+\c@parentequation=\count183
+\dspbrk@lvl=\count184
+\tag@help=\toks15
+\row@=\count185
+\column@=\count186
+\maxfields@=\count187
+\andhelp@=\toks16
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
+\@envbody=\toks17
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+) (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+\MT@toks=\toks22
+\MT@count=\count188
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen144
+LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
+\MT@listname@count=\count189
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2019/11/18 v2.7d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip52
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+)) (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2020-01-22 v2.0d non-zero parskip adjustments
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count190
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/x11nam.def
+File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
+)) (/usr/share/texlive/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2020/01/24 v 0.09 modify URL breaks
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen145
+\Hy@linkcounter=\count191
+\Hy@pagecounter=\count192
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count193
+\pdfmajorversion=\count194
+Package hyperref Info: Option `unicode' set `true' on input line 4421.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count195
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen146
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count196
+\Field@Width=\dimen147
+\Fld@charsize=\dimen148
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count197
+\c@Item=\count198
+\c@Hfootnote=\count199
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+)
+\Fld@listcount=\count266
+\c@bookmark@seq@number=\count267
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip53
+) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
+\BKM@id=\count268
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 51.
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count269
+\FV@InFile=\read2
+\FV@TabBox=\box47
+\c@FancyVerbLine=\count270
+\FV@StepNumber=\count271
+\FV@OutFile=\write3
+) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip54
+\fb@frw=\dimen149
+\fb@frh=\dimen150
+\FrameRule=\dimen151
+\FrameSep=\dimen152
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count272
+\LTcapwidth=\dimen153
+\LT@head=\box48
+\LT@firsthead=\box49
+\LT@foot=\box50
+\LT@lastfoot=\box51
+\LT@cols=\count273
+\LT@rows=\count274
+\c@LT@tables=\count275
+\c@LT@chunks=\count276
+\LT@p@ftn=\toks23
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen154
+\lightrulewidth=\dimen155
+\cmidrulewidth=\dimen156
+\belowrulesep=\dimen157
+\belowbottomsep=\dimen158
+\aboverulesep=\dimen159
+\abovetopsep=\dimen160
+\cmidrulesep=\dimen161
+\cmidrulekern=\dimen162
+\defaultaddspace=\dimen163
+\@cmidla=\count277
+\@cmidlb=\count278
+\@aboverulesep=\dimen164
+\@belowrulesep=\dimen165
+\@thisruleclass=\count279
+\@lastruleclass=\count280
+\@thisrulewidth=\dimen166
+) (/usr/share/texlive/texmf-dist/tex/latex/footnotehyper/footnotehyper.sty
+Package: footnotehyper 2019/11/07 v1.1a hyperref aware footnote.sty (JFB)
+\FNH@notes=\box52
+\FNH@width=\dimen167
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen168
+\Gin@req@width=\dimen169
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count281
+\U@D=\dimen170
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read3
+\bbl@dirlevel=\count282
+)) (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+))
+\cslhangindent=\skip59
+\csllabelwidth=\skip60
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count283
+\calc@Bcount=\count284
+\calc@Adimen=\dimen171
+\calc@Bdimen=\dimen172
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count285
+\calc@Cskip=\skip63
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count286
+\l__pdf_internal_box=\box53
+) (./relatorio_final.aux)
+\openout1 = `relatorio_final.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Info: Redefining \microtypecontext on input line 154.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+LaTeX Info: Redefining \showhyphens on input line 154.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count287
+\scratchdimen=\dimen173
+\scratchbox=\box54
+\nofMPsegments=\count288
+\nofMParguments=\count289
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count290
+\MPscratchDim=\dimen174
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
+\everyMPtoPDFconversion=\toks25
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box55
+Package hyperref Info: Link coloring ON on input line 154.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count293
+)
+LaTeX Info: Redefining \ref on input line 154.
+LaTeX Info: Redefining \pageref on input line 154.
+LaTeX Info: Redefining \nameref on input line 154.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+56.
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+56.
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+156.
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+156.
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 156.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 156.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 156.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 156
+.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 156
+.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./relatorio_final.lot)
+\tf@lot=\write4
+\openout4 = `relatorio_final.lot'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.158 \listoffigures
+                     [1
+
+] (./relatorio_final.lof
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 5.
+)
+\tf@lof=\write5
+\openout5 = `relatorio_final.lof'.
+
+[2
+
+]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+70.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [3
+
+]
+Cap\'{\i }tulo 1.
+[4
+
+]
+
+LaTeX Warning: Reference `conclusoes' on page 5 undefined on input line 215.
+
+[5]
+Cap\'{\i }tulo 2.
+
+Overfull \hbox (135.95839pt too wide) in paragraph at lines 229--294
+[][] 
+ []
+
+[6
+
+] [7]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+01.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+302.
+(/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 1043) in paragraph at lines 320--321
+[]\T1/lmr/m/n/12 (+20) Após tra-ta-mento de da-tas e ou-tros cam-pos, a va-riá-
+vel res-posta foi
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 320--321
+\T1/lmr/m/n/12 (+20) cri-ada com base no pe-ríodo de ocor-rên-cia do crime. A v
+a-riá-vel
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 320--321
+\T1/lmr/m/n/12 (+20) HORA_OCORRENCIA_BO foi trans-for-mada de forma a pro-du-zi
+r
+ []
+
+[8] [9] [10]
+Cap\'{\i }tulo 3.
+<relatorio_final_files/figure-latex/unnamed-chunk-7-1.pdf, id=104, 690.58pt x 3
+98.48875pt>
+File: relatorio_final_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (ty
+pe pdf)
+<use relatorio_final_files/figure-latex/unnamed-chunk-7-1.pdf>
+Package pdftex.def Info: relatorio_final_files/figure-latex/unnamed-chunk-7-1.p
+df  used on input line 404.
+(pdftex.def)             Requested size: 389.99928pt x 225.0432pt.
+[11
+
+]
+Overfull \hbox (1598.35098pt too wide) in paragraph at lines 414--414
+[]\T1/lmtt/m/n/12 FALSE   |                                                    
+                          |                                                    
+                  |   0%  |                                                    
+                          |====================================================
+==================| 100%[] 
+ []
+
+
+Overfull \hbox (17500.32152pt too wide) in paragraph at lines 414--414
+[]\T1/lmtt/m/n/12 FALSE Downloading: 770 B     Downloading: 770 B     Downloadi
+ng: 1.2 kB     Downloading: 1.2 kB     Downloading: 1.7 kB     Downloading: 1.7
+ kB     Downloading: 1.7 kB     Downloading: 1.7 kB     Downloading: 1.8 kB    
+ Downloading: 1.8 kB     Downloading: 1.9 kB     Downloading: 1.9 kB     Downlo
+ading: 1.9 kB     Downloading: 1.9 kB     Downloading: 1.9 kB     Downloading: 
+1.9 kB     Downloading: 2 kB     Downloading: 2 kB     Downloading: 2.1 kB     
+Downloading: 2.1 kB     Downloading: 2.1 kB     Downloading: 2.1 kB     Downloa
+ding: 2.1 kB     Downloading: 2.1 kB     Downloading: 2.1 kB     Downloading: 2
+.1 kB     Downloading: 2.1 kB     Downloading: 2.1 kB     Downloading: 4.5 kB  
+   Downloading: 4.5 kB     Downloading: 4.5 kB     Downloading: 4.5 kB     Down
+loading: 4.5 kB     Downloading: 4.5 kB     Downloading: 13 kB     Downloading:
+ 13 kB     Downloading: 13 kB     Downloading: 13 kB     Downloading: 13 kB    
+ Downloading: 13 kB     Downloading: 21 kB     Downloading: 21 kB     Downloadi
+ng: 21 kB     Downloading: 21 kB     Downloading: 21 kB     Downloading: 21 kB 
+    Downloading: 21 kB     Downloading: 21 kB     Downloading: 29 kB     Downlo
+ading: 29 kB     Downloading: 29 kB     Downloading: 29 kB     Downloading: 29 
+kB     Downloading: 29 kB     Downloading: 37 kB     Downloading: 37 kB     Dow
+nloading: 37 kB     Downloading: 37 kB     Downloading: 37 kB     Downloading: 
+37 kB     Downloading: 37 kB     Downloading: 37 kB     Downloading: 45 kB     
+Downloading: 45 kB     Downloading: 45 kB     Downloading: 45 kB     Downloadin
+g: 45 kB     Downloading: 45 kB     Downloading: 53 kB     Downloading: 53 kB  
+   Downloading: 53 kB     Downloading: 53 kB     Downloading: 53 kB     Downloa
+ding: 53 kB     Downloading: 53 kB     Downloading: 53 kB     Downloading: 61 k
+B     Downloading: 61 kB     Downloading: 61 kB     Downloading: 61 kB     Down
+loading: 61 kB     Downloading: 61 kB     Downloading: 61 kB     Downloading: 6
+1 kB     Downloading: 61 kB     Downloading: 61 kB     Downloading: 69 kB     D
+ownloading: 69 kB     Downloading: 69 kB     Downloading: 69 kB     Downloading
+: 69 kB     Downloading: 69 kB     Downloading: 69 kB     Downloading: 69 kB   
+  Downloading: 77 kB     Downloading: 77 kB     Downloading: 77 kB     Download
+ing: 77 kB     Downloading: 77 kB     Downloading: 77 kB     Downloading: 77 kB
+     Downloading: 77 kB     Downloading: 85 kB     Downloading: 85 kB     Downl
+oading: 85 kB     Downloading: 85 kB     Downloading: 85 kB     Downloading: 85
+ kB     Downloading: 85 kB     Downloading: 85 kB     Downloading: 94 kB     Do
+wnloading: 94 kB     Downloading: 94 kB     Downloading: 94 kB     Downloading:
+ 94 kB     Downloading: 94 kB     Downloading: 94 kB     Downloading: 94 kB    
+ Downloading: 94 kB     Downloading: 94 kB     Downloading: 100 kB     Download
+ing: 100 kB     Downloading: 100 kB     Downloading: 100 kB     Downloading: 10
+0 kB     Downloading: 100 kB     Downloading: 100 kB     Downloading: 100 kB   
+  Downloading: 100 kB     Downloading: 100 kB     Downloading: 110 kB     Downl
+oading: 110 kB     Downloading: 110 kB     Downloading: 110 kB     Downloading:
+ 110 kB     Downloading: 110 kB     Downloading: 110 kB     Downloading: 110 kB
+     Downloading: 110 kB     Downloading: 110 kB     Downloading: 120 kB     Do
+wnloading: 120 kB     Downloading: 120 kB     Downloading: 120 kB     Downloadi
+ng: 120 kB     Downloading: 120 kB     Downloading: 120 kB     Downloading: 120
+ kB     Downloading: 130 kB     Downloading: 130 kB     Downloading: 130 kB    
+ Downloading: 130 kB     Downloading: 130 kB     Downloading: 130 kB     Downlo
+ading: 130 kB     Downloading: 130 kB     Downloading: 130 kB     Downloading: 
+130 kB     Downloading: 130 kB     Downloading: 130 kB     Downloading: 130 kB 
+    Downloading: 130 kB     Downloading: 130 kB     Downloading: 130 kB     Dow
+nloading: 130 kB     Downloading: 130 kB     Downloading: 140 kB     Downloadin
+g: 140 kB     Downloading: 140 kB     Downloading: 140 kB     Downloading: 140 
+kB     Downloading: 140 kB     Downloading: 150 kB     Downloading: 150 kB     
+Downloading: 150 kB     Downloading: 150 kB     Downloading: 150 kB     Downloa
+ding: 150 kB     Downloading: 150 kB     Downloading: 150 kB     Downloading: 1
+60 kB     Downloading: 160 kB     Downloading: 160 kB     Downloading: 160 kB  
+   Downloading: 160 kB     Downloading: 160 kB     Downloading: 160 kB     Down
+loading: 160 kB     Downloading: 160 kB     Downloading: 160 kB     Downloading
+: 160 kB     Downloading: 160 kB     Downloading: 170 kB     Downloading: 170 k
+B     Downloading: 170 kB     Downloading: 170 kB     Downloading: 170 kB     D
+ownloading: 170 kB     Downloading: 170 kB     Downloading: 170 kB     Download
+ing: 170 kB     Downloading: 170 kB     Downloading: 170 kB     Downloading: 17
+0 kB     Downloading: 170 kB     Downloading: 170 kB     Downloading: 170 kB   
+  Downloading: 170 kB     Downloading: 180 kB     Downloading: 180 kB     Downl
+oading: 180 kB     Downloading: 180 kB     Downloading: 180 kB     Downloading:
+ 180 kB     Downloading: 180 kB     Downloading: 180 kB     Downloading: 190 kB
+     Downloading: 190 kB     Downloading: 190 kB     Downloading: 190 kB     Do
+wnloading: 190 kB     Downloading: 190 kB     Downloading: 190 kB     Downloadi
+ng: 190 kB     Downloading: 190 kB     Downloading: 190 kB     Downloading: 190
+ kB     Downloading: 190 kB     Downloading: 200 kB     Downloading: 200 kB    
+ Downloading: 200 kB     Downloading: 200 kB     Downloading: 200 kB     Downlo
+ading: 200 kB     Downloading: 210 kB     Downloading: 210 kB     Downloading: 
+210 kB     Downloading: 210 kB     Downloading: 210 kB     Downloading: 210 kB 
+    Downloading: 210 kB     Downloading: 210 kB     Downloading: 210 kB     Dow
+nloading: 210 kB     Downloading: 210 kB     Downloading: 210 kB     Downloadin
+g: 210 kB     Downloading: 210 kB     Downloading: 210 kB     Downloading: 210 
+kB     Downloading: 210 kB     Downloading: 210 kB     Downloading: 210 kB     
+Downloading: 210 kB     Downloading: 220 kB     Downloading: 220 kB     Downloa
+ding: 220 kB     Downloading: 220 kB     Downloading: 220 kB     Downloading: 2
+20 kB     Downloading: 220 kB     Downloading: 220 kB     Downloading: 220 kB  
+   Downloading: 220 kB     Downloading: 230 kB     Downloading: 230 kB     Down
+loading: 230 kB     Downloading: 230 kB     Downloading: 230 kB     Downloading
+: 230 kB     Downloading: 240 kB     Downloading: 240 kB     Downloading: 240 k
+B     Downloading: 240 kB     Downloading: 240 kB     Downloading: 240 kB     D
+ownloading: 240 kB     Downloading: 240 kB     Downloading: 250 kB     Download
+ing: 250 kB     Downloading: 250 kB     Downloading: 250 kB     Downloading: 25
+0 kB     Downloading: 250 kB     Downloading: 250 kB     Downloading: 250 kB   
+  Downloading: 250 kB     Downloading: 250 kB     Downloading: 260 kB     Downl
+oading: 260 kB     Downloading: 260 kB     Downloading: 260 kB     Downloading:
+ 260 kB     Downloading: 260 kB     Downloading: 260 kB     Downloading: 260 kB
+     Downloading: 260 kB     Downloading: 260 kB     Downloading: 260 kB     Do
+wnloading: 260 kB     Downloading: 260 kB     Downloading: 260 kB     Downloadi
+ng: 260 kB     Downloading: 260 kB     Downloading: 260 kB     Downloading: 260
+ kB     Downloading: 270 kB     Downloading: 270 kB     Downloading: 270 kB    
+ Downloading: 270 kB     Downloading: 270 kB     Downloading: 270 kB     Downlo
+ading: 280 kB     Downloading: 280 kB     Downloading: 280 kB     Downloading: 
+280 kB     Downloading: 280 kB     Downloading: 280 kB     Downloading: 280 kB 
+    Downloading: 280 kB     Downloading: 290 kB     Downloading: 290 kB     Dow
+nloading: 290 kB     Downloading: 290 kB     Downloading: 290 kB     Downloadin
+g: 290 kB     Downloading: 290 kB     Downloading: 290 kB     Downloading: 290 
+kB     Downloading: 290 kB     Downloading: 290 kB     Downloading: 290 kB     
+Downloading: 300 kB     Downloading: 300 kB     Downloading: 300 kB     Downloa
+ding: 300 kB     Downloading: 300 kB     Downloading: 300 kB     Downloading: 3
+00 kB     Downloading: 300 kB     Downloading: 300 kB     Downloading: 300 kB  
+   Downloading: 300 kB     Downloading: 300 kB     Downloading: 300 kB     Down
+loading: 300 kB     Downloading: 300 kB     Downloading: 300 kB     Downloading
+: 310 kB     Downloading: 310 kB     Downloading: 310 kB     Downloading: 310 k
+B     Downloading: 310 kB     Downloading: 310 kB     Downloading: 310 kB     D
+ownloading: 310 kB     Downloading: 310 kB     Downloading: 310 kB     Download
+ing: 320 kB     Downloading: 320 kB     Downloading: 320 kB     Downloading: 32
+0 kB     Downloading: 320 kB     Downloading: 320 kB     Downloading: 330 kB   
+  Downloading: 330 kB     Downloading: 330 kB     Downloading: 330 kB     Downl
+oading: 330 kB     Downloading: 330 kB     Downloading: 330 kB     Downloading:
+ 330 kB     Downloading: 340 kB     Downloading: 340 kB     Downloading: 340 kB
+     Downloading: 340 kB     Downloading: 340 kB     Downloading: 340 kB     Do
+wnloading: 340 kB     Downloading: 340 kB     Downloading: 340 kB     Downloadi
+ng: 340 kB     Downloading: 340 kB     Downloading: 340 kB     Downloading: 340
+ kB     Downloading: 340 kB     Downloading: 340 kB     Downloading: 340 kB    
+ Downloading: 350 kB     Downloading: 350 kB     Downloading: 350 kB     Downlo
+ading: 350 kB     Downloading: 350 kB     Downloading: 350 kB     Downloading: 
+350 kB     Downloading: 350 kB     Downloading: 360 kB     Downloading: 360 kB 
+    Downloading: 360 kB     Downloading: 360 kB     Downloading: 360 kB     Dow
+nloading: 360 kB     Downloading: 360 kB     Downloading: 360 kB     Downloadin
+g: 370 kB     Downloading: 370 kB     Downloading: 370 kB     Downloading: 370 
+kB     Downloading: 370 kB     Downloading: 370 kB     Downloading: 370 kB     
+Downloading: 370 kB     Downloading: 380 kB     Downloading: 380 kB     Downloa
+ding: 380 kB     Downloading: 380 kB     Downloading: 380 kB     Downloading: 3
+80 kB     Downloading: 380 kB     Downloading: 380 kB     Downloading: 380 kB  
+   Downloading: 380 kB     Downloading: 380 kB     Downloading: 380 kB     Down
+loading: 380 kB     Downloading: 380 kB     Downloading: 390 kB     Downloading
+: 390 kB     Downloading: 390 kB     Downloading: 390 kB     Downloading: 390 k
+B     Downloading: 390 kB     Downloading: 400 kB     Downloading: 400 kB     D
+ownloading: 400 kB     Downloading: 400 kB     Downloading: 400 kB     Download
+ing: 400 kB     Downloading: 400 kB     Downloading: 400 kB     Downloading: 40
+0 kB     Downloading: 400 kB     Downloading: 410 kB     Downloading: 410 kB   
+  Downloading: 410 kB     Downloading: 410 kB     Downloading: 410 kB     Downl
+oading: 410 kB     Downloading: 420 kB     Downloading: 420 kB     Downloading:
+ 420 kB     Downloading: 420 kB     Downloading: 420 kB     Downloading: 420 kB
+     Downloading: 420 kB     Downloading: 420 kB     Downloading: 430 kB     Do
+wnloading: 430 kB     Downloading: 430 kB     Downloading: 430 kB     Downloadi
+ng: 430 kB     Downloading: 430 kB     Downloading: 430 kB     Downloading: 430
+ kB     Downloading: 430 kB     Downloading: 430 kB     Downloading: 430 kB    
+ Downloading: 430 kB     Downloading: 430 kB     Downloading: 430 kB     Downlo
+ading: 430 kB     Downloading: 430 kB     Downloading: 440 kB     Downloading: 
+440 kB     Downloading: 440 kB     Downloading: 440 kB     Downloading: 440 kB 
+    Downloading: 440 kB     Downloading: 440 kB     Downloading: 440 kB     Dow
+nloading: 440 kB     Downloading: 440 kB     Downloading: 450 kB     Downloadin
+g: 450 kB     Downloading: 450 kB     Downloading: 450 kB     Downloading: 450 
+kB     Downloading: 450 kB     Downloading: 450 kB     Downloading: 450 kB     
+Downloading: 450 kB     Downloading: 450 kB     Downloading: 460 kB     Downloa
+ding: 460 kB     Downloading: 460 kB     Downloading: 460 kB     Downloading: 4
+60 kB     Downloading: 460 kB     Downloading: 470 kB     Downloading: 470 kB  
+   Downloading: 470 kB     Downloading: 470 kB     Downloading: 470 kB     Down
+loading: 470 kB     Downloading: 470 kB     Downloading: 470 kB     Downloading
+: 470 kB     Downloading: 470 kB     Downloading: 470 kB     Downloading: 470 k
+B     Downloading: 470 kB     Downloading: 470 kB     Downloading: 470 kB     D
+ownloading: 470 kB     Downloading: 480 kB     Downloading: 480 kB     Download
+ing: 480 kB     Downloading: 480 kB     Downloading: 480 kB     Downloading: 48
+0 kB     Downloading: 490 kB     Downloading: 490 kB     Downloading: 490 kB   
+  Downloading: 490 kB     Downloading: 490 kB     Downloading: 490 kB     Downl
+oading: 490 kB     Downloading: 490 kB     Downloading: 490 kB     Downloading:
+ 490 kB     Downloading: 500 kB     Downloading: 500 kB     Downloading: 500 kB
+     Downloading: 500 kB     Downloading: 500 kB     Downloading: 500 kB     Do
+wnloading: 510 kB     Downloading: 510 kB     Downloading: 510 kB     Downloadi
+ng: 510 kB     Downloading: 510 kB     Downloading: 510 kB     Downloading: 510
+ kB     Downloading: 510 kB     Downloading: 510 kB     Downloading: 510 kB    
+ Downloading: 510 kB     Downloading: 510 kB     Downloading: 520 kB     Downlo
+ading: 520 kB     Downloading: 520 kB     Downloading: 520 kB     Downloading: 
+520 kB     Downloading: 520 kB     Downloading: 530 kB     Downloading: 530 kB 
+    Downloading: 530 kB     Downloading: 530 kB     Downloading: 530 kB     Dow
+nloading: 530 kB     Downloading: 530 kB     Downloading: 530 kB     Downloadin
+g: 530 kB     Downloading: 530 kB     Downloading: 540 kB     Downloading: 540 
+kB     Downloading: 540 kB     Downloading: 540 kB     Downloading: 540 kB     
+Downloading: 540 kB     Downloading: 540 kB     Downloading: 540 kB     Downloa
+ding: 540 kB     Downloading: 540 kB     Downloading: 540 kB     Downloading: 5
+40 kB     Downloading: 550 kB     Downloading: 550 kB     Downloading: 550 kB  
+   Downloading: 550 kB     Downloading: 550 kB     Downloading: 550 kB     Down
+loading: 550 kB     Downloading: 550 kB     Downloading: 550 kB     Downloading
+: 550 kB     Downloading: 550 kB     Downloading: 550 kB     Downloading: 550 k
+B     Downloading: 550 kB     Downloading: 550 kB     Downloading: 550 kB     D
+ownloading: 550 kB     Downloading: 550 kB     Downloading: 560 kB     Download
+ing: 560 kB     Downloading: 560 kB     Downloading: 560 kB     Downloading: 56
+0 kB     Downloading: 560 kB     Downloading: 570 kB     Downloading: 570 kB   
+  Downloading: 570 kB     Downloading: 570 kB     Downloading: 570 kB     Downl
+oading: 570 kB     Downloading: 570 kB     Downloading: 570 kB     Downloading:
+ 580 kB     Downloading: 580 kB     Downloading: 580 kB     Downloading: 580 kB
+     Downloading: 580 kB     Downloading: 580 kB     Downloading: 590 kB     Do
+wnloading: 590 kB     Downloading: 590 kB     Downloading: 590 kB     Downloadi
+ng: 590 kB     Downloading: 590 kB     Downloading: 600 kB     Downloading: 600
+ kB     Downloading: 600 kB     Downloading: 600 kB     Downloading: 600 kB    
+ Downloading: 600 kB     Downloading: 600 kB     Downloading: 600 kB     Downlo
+ading: 600 kB     Downloading: 600 kB     Downloading: 600 kB     Downloading: 
+600 kB     Downloading: 600 kB     Downloading: 600 kB     Downloading: 600 kB 
+    Downloading: 600 kB     Downloading: 610 kB     Downloading: 610 kB     Dow
+nloading: 610 kB     Downloading: 610 kB     Downloading: 610 kB     Downloadin
+g: 610 kB     Downloading: 620 kB     Downloading: 620 kB     Downloading: 620 
+kB     Downloading: 620 kB     Downloading: 620 kB     Downloading: 620 kB     
+Downloading: 620 kB     Downloading: 620 kB     Downloading: 620 kB     Downloa
+ding: 620 kB     Downloading: 630 kB     Downloading: 630 kB     Downloading: 6
+30 kB     Downloading: 630 kB     Downloading: 630 kB     Downloading: 630 kB  
+   Downloading: 630 kB     Downloading: 630 kB     Downloading: 640 kB     Down
+loading: 640 kB     Downloading: 640 kB     Downloading: 640 kB     Downloading
+: 640 kB     Downloading: 640 kB     Downloading: 640 kB     Downloading: 640 k
+B     Downloading: 640 kB     Downloading: 640 kB     Downloading: 640 kB     D
+ownloading: 640 kB     Downloading: 650 kB     Downloading: 650 kB     Download
+ing: 650 kB     Downloading: 650 kB     Downloading: 650 kB     Downloading: 65
+0 kB     Downloading: 660 kB     Downloading: 660 kB     Downloading: 660 kB   
+  Downloading: 660 kB     Downloading: 660 kB     Downloading: 660 kB     Downl
+oading: 660 kB     Downloading: 660 kB     Downloading: 660 kB     Downloading:
+ 660 kB     Downloading: 670 kB     Downloading: 670 kB     Downloading: 670 kB
+     Downloading: 670 kB     Downloading: 670 kB     Downloading: 670 kB     Do
+wnloading: 670 kB     Downloading: 670 kB     Downloading: 670 kB     Downloadi
+ng: 670 kB     Downloading: 680 kB     Downloading: 680 kB     Downloading: 680
+ kB     Downloading: 680 kB     Downloading: 680 kB     Downloading: 680 kB    
+ Downloading: 680 kB     Downloading: 680 kB     Downloading: 680 kB     Downlo
+ading: 680 kB     Downloading: 680 kB     Downloading: 680 kB     Downloading: 
+680 kB     Downloading: 680 kB     Downloading: 680 kB     Downloading: 680 kB 
+    Downloading: 690 kB     Downloading: 690 kB     Downloading: 690 kB     Dow
+nloading: 690 kB     Downloading: 690 kB     Downloading: 690 kB     Downloadin
+g: 700 kB     Downloading: 700 kB     Downloading: 700 kB     Downloading: 700 
+kB     Downloading: 700 kB     Downloading: 700 kB     Downloading: 700 kB     
+Downloading: 700 kB     Downloading: 700 kB     Downloading: 700 kB     Downloa
+ding: 700 kB     Downloading: 700 kB     Downloading: 710 kB     Downloading: 7
+10 kB     Downloading: 710 kB     Downloading: 710 kB     Downloading: 710 kB  
+   Downloading: 710 kB     Downloading: 720 kB     Downloading: 720 kB     Down
+loading: 720 kB     Downloading: 720 kB     Downloading: 720 kB     Downloading
+: 720 kB     Downloading: 720 kB     Downloading: 720 kB     Downloading: 720 k
+B     Downloading: 720 kB     Downloading: 720 kB     Downloading: 720 kB     D
+ownloading: 720 kB     Downloading: 720 kB     Downloading: 730 kB     Download
+ing: 730 kB     Downloading: 730 kB     Downloading: 730 kB     Downloading: 73
+0 kB     Downloading: 730 kB     Downloading: 730 kB     Downloading: 730 kB   
+  Downloading: 730 kB     Downloading: 730 kB     Downloading: 730 kB     Downl
+oading: 730 kB     Downloading: 730 kB     Downloading: 730 kB     Downloading:
+ 730 kB     Downloading: 730 kB     Downloading: 730 kB     Downloading: 730 kB
+     Downloading: 730 kB     Downloading: 730 kB     Downloading: 740 kB     Do
+wnloading: 740 kB     Downloading: 740 kB     Downloading: 740 kB     Downloadi
+ng: 740 kB     Downloading: 740 kB     Downloading: 750 kB     Downloading: 750
+ kB     Downloading: 750 kB     Downloading: 750 kB     Downloading: 750 kB    
+ Downloading: 750 kB     Downloading: 760 kB     Downloading: 760 kB     Downlo
+ading: 760 kB     Downloading: 760 kB     Downloading: 760 kB     Downloading: 
+760 kB     Downloading: 760 kB     Downloading: 760 kB     Downloading: 760 kB 
+    Downloading: 760 kB     Downloading: 770 kB     Downloading: 770 kB     Dow
+nloading: 770 kB     Downloading: 770 kB     Downloading: 770 kB     Downloadin
+g: 770 kB     Downloading: 770 kB     Downloading: 770 kB     Downloading: 770 
+kB     Downloading: 770 kB     Downloading: 770 kB     Downloading: 770 kB     
+Downloading: 780 kB     Downloading: 780 kB     Downloading: 780 kB     Downloa
+ding: 780 kB     Downloading: 780 kB     Downloading: 780 kB     Downloading: 7
+80 kB     Downloading: 780 kB     Downloading: 780 kB     Downloading: 780 kB  
+   Downloading: 780 kB     Downloading: 780 kB     Downloading: 780 kB     Down
+loading: 780 kB     Downloading: 790 kB     Downloading: 790 kB     Downloading
+: 790 kB     Downloading: 790 kB     Downloading: 790 kB     Downloading: 790 k
+B     Downloading: 790 kB     Downloading: 790 kB     Downloading: 790 kB     D
+ownloading: 790 kB     Downloading: 790 kB     Downloading: 790 kB     Download
+ing: 800 kB     Downloading: 800 kB     Downloading: 800 kB     Downloading: 80
+0 kB     Downloading: 800 kB     Downloading: 800 kB     Downloading: 800 kB   
+  Downloading: 800 kB     Downloading: 800 kB     Downloading: 800 kB     Downl
+oading: 800 kB     Downloading: 800 kB     Downloading: 800 kB     Downloading:
+ 800 kB     Downloading: 810 kB     Downloading: 810 kB     Downloading: 810 kB
+     Downloading: 810 kB     Downloading: 810 kB     Downloading: 810 kB     Do
+wnloading: 810 kB     Downloading: 810 kB     Downloading: 810 kB     Downloadi
+ng: 810 kB     Downloading: 810 kB     Downloading: 810 kB     Downloading: 820
+ kB     Downloading: 820 kB     Downloading: 820 kB     Downloading: 820 kB    
+ Downloading: 820 kB     Downloading: 820 kB     Downloading: 830 kB     Downlo
+ading: 830 kB     Downloading: 830 kB     Downloading: 830 kB     Downloading: 
+830 kB     Downloading: 830 kB     Downloading: 840 kB     Downloading: 840 kB 
+    Downloading: 840 kB     Downloading: 840 kB     Downloading: 840 kB     Dow
+nloading: 840 kB     Downloading: 850 kB     Downloading: 850 kB     Downloadin
+g: 850 kB     Downloading: 850 kB     Downloading: 850 kB     Downloading: 850 
+kB     Downloading: 850 kB     Downloading: 850 kB     Downloading: 850 kB     
+Downloading: 850 kB     Downloading: 850 kB     Downloading: 850 kB     Downloa
+ding: 850 kB     Downloading: 850 kB     Downloading: 860 kB     Downloading: 8
+60 kB     Downloading: 860 kB     Downloading: 860 kB     Downloading: 860 kB  
+   Downloading: 860 kB     Downloading: 870 kB     Downloading: 870 kB     Down
+loading: 870 kB     Downloading: 870 kB     Downloading: 870 kB     Downloading
+: 870 kB     Downloading: 880 kB     Downloading: 880 kB     Downloading: 880 k
+B     Downloading: 880 kB     Downloading: 880 kB     Downloading: 880 kB     D
+ownloading: 890 kB     Downloading: 890 kB     Downloading: 890 kB     Download
+ing: 890 kB     Downloading: 890 kB     Downloading: 890 kB     Downloading: 90
+0 kB     Downloading: 900 kB     Downloading: 900 kB     Downloading: 900 kB   
+  Downloading: 900 kB     Downloading: 900 kB     Downloading: 900 kB     Downl
+oading: 900 kB     Downloading: 900 kB     Downloading: 900 kB     Downloading:
+ 900 kB     Downloading: 900 kB     Downloading: 900 kB     Downloading: 900 kB
+     Downloading: 900 kB     Downloading: 900 kB     Downloading: 900 kB     Do
+wnloading: 900 kB     Downloading: 910 kB     Downloading: 910 kB     Downloadi
+ng: 910 kB     Downloading: 910 kB     Downloading: 910 kB     Downloading: 910
+ kB     Downloading: 920 kB     Downloading: 920 kB     Downloading: 920 kB    
+ Downloading: 920 kB     Downloading: 920 kB     Downloading: 920 kB     Downlo
+ading: 930 kB     Downloading: 930 kB     Downloading: 930 kB     Downloading: 
+930 kB     Downloading: 930 kB     Downloading: 930 kB     Downloading: 940 kB 
+    Downloading: 940 kB     Downloading: 940 kB     Downloading: 940 kB     Dow
+nloading: 940 kB     Downloading: 940 kB     Downloading: 940 kB     Downloadin
+g: 940 kB     Downloading: 940 kB     Downloading: 940 kB     Downloading: 940 
+kB     Downloading: 940 kB     Downloading: 950 kB     Downloading: 950 kB     
+Downloading: 950 kB     Downloading: 950 kB     Downloading: 950 kB     Downloa
+ding: 950 kB     Downloading: 960 kB     Downloading: 960 kB     Downloading: 9
+60 kB     Downloading: 960 kB     Downloading: 960 kB     Downloading: 960 kB  
+   Downloading: 970 kB     Downloading: 970 kB     Downloading: 970 kB     Down
+loading: 970 kB     Downloading: 970 kB     Downloading: 970 kB     Downloading
+: 980 kB     Downloading: 980 kB     Downloading: 980 kB     Downloading: 980 k
+B     Downloading: 980 kB     Downloading: 980 kB     Downloading: 980 kB     D
+ownloading: 980 kB     Downloading: 980 kB     Downloading: 980 kB     Download
+ing: 980 kB     Downloading: 980 kB     Downloading: 980 kB     Downloading: 98
+0 kB     Downloading: 980 kB     Downloading: 980 kB     Downloading: 990 kB   
+  Downloading: 990 kB     Downloading: 990 kB     Downloading: 990 kB     Downl
+oading: 990 kB     Downloading: 990 kB     Downloading: 1 MB     Downloading: 1
+ MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downl
+oading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB 
+    Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloadi
+ng: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     
+Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 
+1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Down
+loading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB
+     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Download
+ing: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB    
+ Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading:
+ 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Dow
+nloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 M
+B     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloa
+ding: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB   
+  Downloading: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading
+: 1 MB     Downloading: 1 MB     Downloading: 1 MB     Downloading: 1.1 MB     
+Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloa
+ding: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1
+.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB  
+   Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Down
+loading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading
+: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 M
+B     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     D
+ownloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Download
+ing: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.
+1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB   
+  Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downl
+oading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading:
+ 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB
+     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Do
+wnloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloadi
+ng: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1
+ MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB    
+ Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downlo
+ading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 
+1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB 
+    Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Dow
+nloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloadin
+g: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 
+MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     
+Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloa
+ding: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1
+.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB  
+   Downloading: 1.1 MB     Downloading: 1.1 MB     Downloading: 1.1 MB     Down
+loading: 1.1 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading
+: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 M
+B     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     D
+ownloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Download
+ing: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.
+2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB   
+  Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downl
+oading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading:
+ 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB
+     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Do
+wnloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloadi
+ng: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2
+ MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB    
+ Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downlo
+ading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 
+1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB 
+    Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Dow
+nloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloadin
+g: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 
+MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     
+Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloa
+ding: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1
+.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB  
+   Downloading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.2 MB     Down
+loading: 1.2 MB     Downloading: 1.2 MB     Downloading: 1.3 MB     Downloading
+: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 M
+B     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     D
+ownloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Download
+ing: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.
+3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB   
+  Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downl
+oading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading:
+ 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB
+     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Do
+wnloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloadi
+ng: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3
+ MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB    
+ Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downlo
+ading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 
+1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB 
+    Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Dow
+nloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloadin
+g: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 
+MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     
+Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloa
+ding: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1
+.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB  
+   Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Down
+loading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading
+: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 M
+B     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     D
+ownloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Download
+ing: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.
+3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB   
+  Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downl
+oading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading:
+ 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB
+     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Do
+wnloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloadi
+ng: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3 MB     Downloading: 1.3
+ MB     Downloading: 1.3 MB     Downloading: 1.4 MB     Downloading: 1.4 MB    
+ Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downlo
+ading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 
+1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB 
+    Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Dow
+nloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloadin
+g: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 
+MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     
+Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloa
+ding: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1
+.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB  
+   Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Down
+loading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading
+: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 M
+B     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     D
+ownloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Download
+ing: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.
+4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB   
+  Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downl
+oading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading:
+ 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB
+     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Do
+wnloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloadi
+ng: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4
+ MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB    
+ Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downlo
+ading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 
+1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB 
+    Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Dow
+nloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloadin
+g: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 
+MB     Downloading: 1.4 MB     Downloading: 1.4 MB     Downloading: 1.4 MB[] 
+ []
+
+<relatorio_final_files/figure-latex/unnamed-chunk-8-1.pdf, id=113, 659.46375pt 
+x 457.71pt>
+File: relatorio_final_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (ty
+pe pdf)
+<use relatorio_final_files/figure-latex/unnamed-chunk-8-1.pdf>
+Package pdftex.def Info: relatorio_final_files/figure-latex/unnamed-chunk-8-1.p
+df  used on input line 416.
+(pdftex.def)             Requested size: 390.006pt x 270.6891pt.
+[12 <./relatorio_final_files/figure-latex/unnamed-chunk-7-1.pdf>]
+<assets/img/output_early_viz.jpeg, id=140, 562.1pt x 548.0475pt>
+File: assets/img/output_early_viz.jpeg Graphic file (type jpg)
+<use assets/img/output_early_viz.jpeg>
+Package pdftex.def Info: assets/img/output_early_viz.jpeg  used on input line 4
+22.
+(pdftex.def)             Requested size: 390.00223pt x 380.25217pt.
+<relatorio_final_files/figure-latex/unnamed-chunk-9-1.pdf, id=141, 690.58pt x 2
+10.7875pt>
+File: relatorio_final_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (ty
+pe pdf)
+<use relatorio_final_files/figure-latex/unnamed-chunk-9-1.pdf>
+Package pdftex.def Info: relatorio_final_files/figure-latex/unnamed-chunk-9-1.p
+df  used on input line 429.
+(pdftex.def)             Requested size: 389.99928pt x 119.04048pt.
+<relatorio_final_files/figure-latex/unnamed-chunk-9-2.pdf, id=142, 710.655pt x 
+202.7575pt>
+File: relatorio_final_files/figure-latex/unnamed-chunk-9-2.pdf Graphic file (ty
+pe pdf)
+<use relatorio_final_files/figure-latex/unnamed-chunk-9-2.pdf>
+Package pdftex.def Info: relatorio_final_files/figure-latex/unnamed-chunk-9-2.p
+df  used on input line 429.
+(pdftex.def)             Requested size: 390.0048pt x 111.27255pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
+[]
+ []
+
+[13 <./relatorio_final_files/figure-latex/unnamed-chunk-8-1.pdf>] [14 <./assets
+/img/output_early_viz.jpeg>]
+<relatorio_final_files/figure-latex/unnamed-chunk-10-1.pdf, id=157, 706.64pt x 
+423.5825pt>
+File: relatorio_final_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (t
+ype pdf)
+<use relatorio_final_files/figure-latex/unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: relatorio_final_files/figure-latex/unnamed-chunk-10-1.
+pdf  used on input line 434.
+(pdftex.def)             Requested size: 390.001pt x 233.779pt.
+<relatorio_final_files/figure-latex/unnamed-chunk-11-1.pdf, id=158, 691.58376pt
+ x 416.55624pt>
+File: relatorio_final_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (t
+ype pdf)
+<use relatorio_final_files/figure-latex/unnamed-chunk-11-1.pdf>
+Package pdftex.def Info: relatorio_final_files/figure-latex/unnamed-chunk-11-1.
+pdf  used on input line 439.
+(pdftex.def)             Requested size: 390.00685pt x 234.90977pt.
+[15 <./relatorio_final_files/figure-latex/unnamed-chunk-9-1.pdf> <./relatorio_f
+inal_files/figure-latex/unnamed-chunk-9-2.pdf
+
+pdfTeX warning: pdflatex (file ./relatorio_final_files/figure-latex/unnamed-chu
+nk-9-2.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+> <./relatorio_final_files/figure-latex/unnamed-chunk-10-1.pdf
+
+pdfTeX warning: pdflatex (file ./relatorio_final_files/figure-latex/unnamed-chu
+nk-10-1.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+<relatorio_final_files/figure-latex/unnamed-chunk-12-1.pdf, id=198, 690.58pt x 
+419.5675pt>
+File: relatorio_final_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (t
+ype pdf)
+<use relatorio_final_files/figure-latex/unnamed-chunk-12-1.pdf>
+Package pdftex.def Info: relatorio_final_files/figure-latex/unnamed-chunk-12-1.
+pdf  used on input line 444.
+(pdftex.def)             Requested size: 389.99928pt x 236.94724pt.
+<relatorio_final_files/figure-latex/unnamed-chunk-13-1.pdf, id=199, 687.56876pt
+ x 398.48875pt>
+File: relatorio_final_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (t
+ype pdf)
+<use relatorio_final_files/figure-latex/unnamed-chunk-13-1.pdf>
+Package pdftex.def Info: relatorio_final_files/figure-latex/unnamed-chunk-13-1.
+pdf  used on input line 449.
+(pdftex.def)             Requested size: 389.99832pt x 226.02823pt.
+[16 <./relatorio_final_files/figure-latex/unnamed-chunk-11-1.pdf> <./relatorio_
+final_files/figure-latex/unnamed-chunk-12-1.pdf
+
+pdfTeX warning: pdflatex (file ./relatorio_final_files/figure-latex/unnamed-chu
+nk-12-1.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>]
+<relatorio_final_files/figure-latex/item Rforest-1.pdf, id=229, 395.4775pt x 42
+2.57875pt>
+File: relatorio_final_files/figure-latex/item Rforest-1.pdf Graphic file (type 
+pdf)
+<use relatorio_final_files/figure-latex/item Rforest-1.pdf>
+Package pdftex.def Info: relatorio_final_files/figure-latex/item Rforest-1.pdf 
+ used on input line 472.
+(pdftex.def)             Requested size: 390.00323pt x 416.72935pt.
+[17 <./relatorio_final_files/figure-latex/unnamed-chunk-13-1.pdf>]
+<assets/img/output_rf_viz.jpeg, id=248, 513.92pt x 540.0175pt>
+File: assets/img/output_rf_viz.jpeg Graphic file (type jpg)
+<use assets/img/output_rf_viz.jpeg>
+Package pdftex.def Info: assets/img/output_rf_viz.jpeg  used on input line 484.
+
+(pdftex.def)             Requested size: 390.00296pt x 409.8078pt.
+[18 <./relatorio_final_files/figure-latex/item Rforest-1.pdf>] [19 <./assets/im
+g/output_rf_viz.jpeg>]
+<relatorio_final_files/figure-latex/item Regressao-1.pdf, id=278, 395.4775pt x 
+422.57875pt>
+File: relatorio_final_files/figure-latex/item Regressao-1.pdf Graphic file (typ
+e pdf)
+<use relatorio_final_files/figure-latex/item Regressao-1.pdf>
+Package pdftex.def Info: relatorio_final_files/figure-latex/item Regressao-1.pd
+f  used on input line 509.
+(pdftex.def)             Requested size: 390.00323pt x 416.72935pt.
+[20] [21 <./relatorio_final_files/figure-latex/item Regressao-1.pdf>]
+<assets/img/output_knn_viz.jpeg, id=308, 513.92pt x 540.0175pt>
+File: assets/img/output_knn_viz.jpeg Graphic file (type jpg)
+<use assets/img/output_knn_viz.jpeg>
+Package pdftex.def Info: assets/img/output_knn_viz.jpeg  used on input line 561
+.
+(pdftex.def)             Requested size: 390.00296pt x 409.8078pt.
+[22] [23 <./assets/img/output_knn_viz.jpeg>] [24]
+Cap\'{\i }tulo 4.
+[25
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 604.
+[26
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 604.
+(./relatorio_final.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 604.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 604.
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 14219 strings out of 481239
+ 210465 string characters out of 5920377
+ 627381 words of memory out of 5000000
+ 29027 multiletter control sequences out of 15000+600000
+ 593001 words of font info for 109 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,6n,42p,34759b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
+vips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmtt12.pfb>
+Output written on relatorio_final.pdf (27 pages, 12201968 bytes).
+PDF statistics:
+ 475 PDF objects out of 1000 (max. 8388607)
+ 390 compressed objects within 4 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 12586 words of extra memory for PDF output out of 14400 (max. 10000000)
+

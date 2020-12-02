@@ -1,0 +1,29 @@
+# Introdução {#introducao}
+
+O Brasil tem a segunda maior taxa de homicídios da América do Sul, segundo relatório das Nações Unidas em 2017, e ocupa a 12ª posição no ranking global de violência, com uma taxa de 30,5 homicídios a cada 100.000 habitantes. 
+
+Em 2016, a Organização para a Cooperação e Desenvolvimento Econômico (OCDE) divulgou que as vítimas de assaltos no Brasil, nos últimos 12 meses da pesquisa, foram de 7,9% dos entrevistados, quase o dobro da média dos países em que a pesquisa foi realizada. Este preocupante quadro mostra a situação da violência e a necessidade de políticas públicas adequadas para segurança pública.
+
+
+## Objetivo
+
+A partir de dados de boletins de ocorrência (BO) da Secretaria de Seguraça Pública (SSP) do estado de São Paulo, o objetivo deste estudo é prever o horário do crime de acordo com algumas características, por exemplo, localização, sexo da vítima, cor da vítma, entre outros. 
+
+Dessa forma, visa-se identificar quais os horários das ocorrências de acordo com a tipologia do crime e assim fornecer insights para o policiamento. 
+
+
+## Questões Norteadoras
+
+O projeto dedica-se à análise dos boletins de ocorrência da Secretaria de Segurança Pública de São Paulo, endereçando os pontos principais abaixo.
+
+- Em que períodos do dia ocorrem mais crimes?
+- Existe relação entre localização e horário?
+- Que características das ocorrências são relacionadas ao período?
+
+A pesquisa utilizou como base tais questões, que orientam a análise dos dados, para chegar a conclusões acerca de aplicações práticas e orientações a respeito, por exemplo, do policiamento na cidade de São Paulo para o combate à criminalidade.
+
+## Organização do trabalho
+
+O presente relatório foi organizado em três capítulos, além desta introdução. No Capítulo \@ref(metodologia), apresentamos as decisões metodológicas e organização dos dados de BOs. No Capítulo \@ref(resultados), apresentamos os principais resultados dos métodos utilizados, organizados de acordo com cada método. No Capítulo \@ref(conclusoes), apresentamos as considerações finais e sugestões.
+
+

@@ -1,0 +1,5 @@
+# Conclusão {#conclusao}
+
+Como apresentado na seção anterior, a métrica acurácia indica que métodos baseados em árvore ou regressão atingiram um acerto na casa de 30%, enquanto o KNN, principalmente devido às variáveis bastante precisas de latitude e longitude, alcança resultados superiores a 50% de acerto. 
+
+Em relação às possíveis aplicações práticas que possam ser de interesse a partir desta base de dados, concluímos que a questão espacial do problema - isto é, localização da ocorrência - é de grande relevância para obter relações com o horário da mesma. Somando esta conclusão à interpretabilidade do KNN, que se baseia justamente em distâncias entre as variáveis, este trabalho mostra que há espaço para utilização destas informações para melhorias em políticas públicas para segurança.
