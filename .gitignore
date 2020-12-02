@@ -4,6 +4,6 @@
 .Ruserdata
 DADOS_SCRIPT_RODOLFO
 apresentacao/libs/
-data
+data/
 relatorio.log
-index_files
+index_files/*
