@@ -394,13 +394,10 @@ Os  métodos de aprendizagem supervisionada para classificação utilizados ser�
 
 - É um método de aprendizagem de conjunto para classificação, regressão e outras tarefas.
 
-
 - Constroi uma infinidade de árvores de decisão no momento do treinamento 
-
 
 - Gera a categorias que é a moda das categorias, no caso de classificação.
 
---
 - Corrigem o hábito das árvores de decisão de sobreajustar os dados de treinamento. 
 .center[![Random forest](mapa_rf.jpeg)]
 
@@ -410,15 +407,11 @@ Os  métodos de aprendizagem supervisionada para classificação utilizados ser�
 
 - Na classificação k-NN, a saída é uma associação de classe.
 
-
 - Um objeto é classificado por uma pluralidade de votos de seus vizinhos, com o objeto sendo atribuído à classe mais comum entre seus k vizinhos mais próximos 
-
 
 - Se k = 1, então o objeto é simplesmente atribuído à classe daquele único vizinho mais próximo.
 
-
 - Valores maiores de k reduzem o efeito do ruído na classificação, mas tornam os limites entre as classes menos distintos.
-
 
 .center[![KNN](mapa_knn.jpeg)]
 
@@ -428,9 +421,7 @@ Os  métodos de aprendizagem supervisionada para classificação utilizados ser�
 
 - XGBoost é um algoritmo de aprendizado de máquina baseado em árvore de decisão que usa uma estrutura de gradiente _boosting_.
 
-
 - Regularização: penaliza modelos mais complexos por meio da regularização LASSO (L1) e Ridge (L2) para evitar _overfitting_.
-
 
 - Validação cruzada: O algoritmo vem com método de validação cruzada embutido em cada iteração, eliminando a necessidade de programar explicitamente essa pesquisa e especificar o número exato de iterações de reforço necessárias em uma única execução.
 
@@ -472,9 +463,6 @@ res %>% knitr::kable()
 - Variáveis espaciais, LAGITUDE e LONGITUDE, são as que mais apresentaram relevância nos modelos ajustados.
 
 - Dos métodos ajustados, XGBoost foi o que apresentou a melhor acurácia após otimização de hiperparâmetros, seguido pelo KNN.
-
-
-
 
 
 # Referências
