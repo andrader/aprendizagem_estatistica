@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 720.00 216.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    line, polyline, polygon, path, rect, circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3MjAuMDB8MTkzLjA1fDIyLjI3'>
+    <rect x='0.00' y='22.27' width='720.00' height='170.78' />
+  </clipPath>
+</defs>
+<rect x='406.95' y='43.62' width='280.32' height='128.08' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #414487;' clip-path='url(#cpMC4wMHw3MjAuMDB8MTkzLjA1fDIyLjI3)' />
+<rect x='402.89' y='43.62' width='4.07' height='128.08' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #2A788E;' clip-path='url(#cpMC4wMHw3MjAuMDB8MTkzLjA1fDIyLjI3)' />
+<rect x='32.73' y='43.62' width='370.16' height='128.08' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #22A884;' clip-path='url(#cpMC4wMHw3MjAuMDB8MTkzLjA1fDIyLjI3)' />
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MTkzLjA1fDIyLjI3)'><text x='530.03' y='113.53' style='font-size: 17.07px; fill: #FFFFFF; font-family: Arimo;' textLength='34.17px' lengthAdjust='spacingAndGlyphs'>43%</text></g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MTkzLjA1fDIyLjI3)'><text x='392.58' y='113.53' style='font-size: 17.07px; fill: #FFFFFF; font-family: Arimo;' textLength='24.67px' lengthAdjust='spacingAndGlyphs'>1%</text></g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MTkzLjA1fDIyLjI3)'><text x='200.72' y='113.53' style='font-size: 17.07px; fill: #FFFFFF; font-family: Arimo;' textLength='34.17px' lengthAdjust='spacingAndGlyphs'>57%</text></g>
+<defs>
+  <clipPath id='cpMC4wMHw3MjAuMDB8MjE2LjAwfDAuMDA='>
+    <rect x='0.00' y='0.00' width='720.00' height='216.00' />
+  </clipPath>
+</defs>
+<rect x='311.37' y='199.43' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #414487;' clip-path='url(#cpMC4wMHw3MjAuMDB8MjE2LjAwfDAuMDA=)' />
+<rect x='349.32' y='199.43' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #2A788E;' clip-path='url(#cpMC4wMHw3MjAuMDB8MjE2LjAwfDAuMDA=)' />
+<rect x='383.60' y='199.43' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #22A884;' clip-path='url(#cpMC4wMHw3MjAuMDB8MjE2LjAwfDAuMDA=)' />
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MjE2LjAwfDAuMDA=)'><text x='334.92' y='211.21' style='font-size: 11.20px; font-family: Arimo;' textLength='6.84px' lengthAdjust='spacingAndGlyphs'>F</text></g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MjE2LjAwfDAuMDA=)'><text x='372.86' y='211.21' style='font-size: 11.20px; font-family: Arimo;' textLength='3.11px' lengthAdjust='spacingAndGlyphs'>I</text></g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MjE2LjAwfDAuMDA=)'><text x='407.15' y='211.21' style='font-size: 11.20px; font-family: Arimo;' textLength='9.33px' lengthAdjust='spacingAndGlyphs'>M</text></g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MjE2LjAwfDAuMDA=)'><text x='0.00' y='18.53' style='font-size: 16.80px; font-family: Arimo;' textLength='127.92px' lengthAdjust='spacingAndGlyphs'>Sexo das vítimas</text></g>
+</svg>

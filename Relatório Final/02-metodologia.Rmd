@@ -1,0 +1,162 @@
+# Metodologia
+
+
+No Capítulo \@ref(introducao), citamos brevemente algumas das variáveis que podem ser de interesse na análise dos boletins de ocorrência e as principais perguntas. Neste capítulo, apresentamos o conjunto de dados e os procedimento de tratamento e análise realizados para atingir nossos objetivos.
+
+## Fonte dos dados
+
+A base de dados que será trabalhada refere-se a boletins de ocorrência na Grande São Paulo, disponível em [Crime Data in Brazil -  Kaggle](https://www.kaggle.com/inquisitivecrow/crime-data-in-brazil).
+
+Abaixo estão listadas todas as variáveis e suas respectivas descrições, segundo dicionário de dados fornecido no mesmo repositório.
+
+```{r dados, echo=FALSE}
+library(magrittr)
+tibble::tribble(
+                     ~variavel,                                                    ~descricao,
+                "ID_DELEGACIA", "Código da delegacia responsável pelo registro da ocorrencia",
+           "NOME_DEPARTAMENTO",                      "Departamento responsável pelo registro",
+              "NOME_SECCIONAL",               "Delegacia Seccional responsável pelo registro",
+              "NOME_DELEGACIA",                         "Delegacia responsável pelo registro",
+                      "CIDADE",                                          "Cidade de Registro",
+                      "ANO_BO",                                           "Ano da ocorrencia",
+                      "NUM_BO",                                                "Número do BO",
+      "NOME_DEPARTAMENTO_CIRC",                               "Departamento de Circunscrição",
+         "NOME_SECCIONAL_CIRC",                                  "Seccional de Circunscrição",
+         "NOME_DELEGACIA_CIRC",                                  "Delegacia de Circunscrição",
+         "NOME_MUNICIPIO_CIRC",                                  "Município de Circunscrição",
+               "DESCR_TIPO_BO",                                           "Tipo de Documento",
+          "DATA_OCORRENCIA_BO",                                          "Data da Ocorrência",
+          "HORA_OCORRENCIA_BO",                                          "Hora da Ocorrência",
+     "DATAHORA_COMUNICACAO_BO",                      "Data Hora da Comunicação da Ocorrência",
+                 "FLAG_STATUS",                                        "Status da Ocorrência",
+                     "RUBRICA",                             "Natureza jurídica da ocorrência",
+               "DESCR_CONDUTA",                                       "Conduta na Ocorrência",
+               "DESDOBRAMENTO",                                 "Desdobramento na Ocorrência",
+             "DESCR_TIPOLOCAL",                                               "Tipo de Local",
+          "DESCR_SUBTIPOLOCAL",                               "Descrição do subTipo de local",
+                  "LOGRADOURO",                                        "Logradouro dos fatos",
+           "NUMERO_LOGRADOURO",                              "Numero do Logradouro dos fatos",
+                    "LATITUDE",                                      "Latitude da Ocorrência",
+                   "LONGITUDE",                                     "Longitude da Ocorrência",
+           "DESCR_TIPO_PESSOA",                     "Qualificação do envolvido na ocorrência",
+           "FLAG_VITIMA_FATAL",                      "Condição do Autor / Vítma na corrência",
+                 "SEXO_PESSOA",                                                        "Sexo",
+                "IDADE_PESSOA",                                                       "Idade",
+                   "COR_CUTIS",                                                 "Cor da Pele"
+     ) %>% 
+  setNames(c("Variável", "Descrição")) %>% 
+  knitr::kable()
+```
+
+
+## Filtros de escopo e tratamento dos dados
+
+Algumas variáveis foram tratadas para refletir sua natureza real, como, por exemplo, datas e horários.
+
+```{r include=FALSE}
+library(ggplot2);library(plyr);library(dplyr);library(lubridate);library(stringr);library(tidyverse);library(sf);library(mapview)
+library(tidymodels);library(themis);library(parsnip);library(workflows);library(randomForest); library(glmnet); library(class)
+```
+
+
+```{r echo=TRUE, results='hide'}
+df <- read.csv('RDO_3.csv')
+df$DATA_OCORRENCIA_BO <- as.Date(df$DATA_OCORRENCIA_BO,format="%d/%m/%Y")
+df$HORA_OCORRENCIA_BO <- lubridate::hour(strptime(x = df$HORA_OCORRENCIA_BO, format = "%H:%M"))
+df$IDADE_PESSOA <- as.numeric(df$IDADE_PESSOA)
+df <- df[!(is.na(df$HORA_OCORRENCIA_BO) | df$HORA_OCORRENCIA_BO==""), ]
+df <- df[(is.na(df$X) | df$X==""), ]
+df$target <- cut(df$HORA_OCORRENCIA_BO, 
+                 breaks = c(-0.5, 5.5, 11.5, 17.5, 23.5), 
+                 labels = c('4.Madrugada', '1.Manhã', '2.Tarde', '3.Noite'))
+df$LATITUDE <- as.numeric(df$LATITUDE)
+df$LONGITUDE <- as.numeric(df$LONGITUDE)
+locations_df <- df[,c('LATITUDE', 'LONGITUDE', 'target')]
+locations_df <- locations_df[!(is.na(df$LATITUDE)), ]
+locations <- as_tibble(locations_df)
+locations_sf <- sf::st_as_sf(locations, coords = c("LONGITUDE", "LATITUDE"), crs = 4326)
+```
+
+
+Após tratamento de datas e outros campos, a variável resposta foi criada com base no período de ocorrência do crime. A variável HORA_OCORRENCIA_BO foi transformada de forma a produzir quatro classes de acordo com o horário do crime: manhã, tarde, noite e madrugada. Vemos que a distribuição das categorias desta variável, apesar de não apresentar balanceamento completo entre as quatro classes, o problema de desbalanceamento não é tão presente aqui.
+
+```{r echo = FALSE}
+tibble::tribble(
+        ~target,      ~n,
+      "1.Manhã",  87239L,
+      "2.Tarde",  95823L,
+      "3.Noite", 142640L,
+  "4.Madrugada",  55213L
+  ) %>% 
+  knitr::kable()
+```
+
+
+## Métodos utilizados
+
+Dado que o problema é de classificação, os métodos de aprendizagem supervisionada para utilizados foram:
+
+1. Regressão logística multinomial;
+2. K-Nearest Neighbor(KNN) Classification;
+3. Random Forest;
+4. XGBoost.
+
+### Regressão logística
+
+É usada para prever a categoria ou a probabilidade de uma categoria em uma variável dependente com base em várias variáveis independentes. As variáveis independentes podem ser dicotômicas (ou seja, binárias) ou contínuas (ou seja, intervalo ou razão em escala).
+
+A regressão logística multinomial é uma extensão da regressão logística binária que permite mais de duas categorias da variável dependente.
+
+
+### KNN
+
+Na classificação k-NN, a saída é uma associação de classe. Um objeto é classificado por uma pluralidade de votos de seus vizinhos, com o objeto sendo atribuído à classe mais comum entre seus k vizinhos mais próximos.
+
+Se k = 1, então o objeto é simplesmente atribuído à classe daquele único vizinho mais próximo. Observa-se também que valores maiores de k reduzem o efeito do ruído na classificação, mas tornam os limites entre as classes menos distintos.
+
+### Random Forest
+
+O random forest é um método de aprendizagem de conjunto para classificação, regressão e outras tarefas, que constroi uma infinidade de árvores de decisão no momento do treinamento.
+
+No caso de classifição, gera a categorias que é a moda das categorias, além de corrigir o hábito das árvores de decisão de sobreajustar os dados de treinamento. 
+
+### XGBoost
+
+XGBoost é um algoritmo de aprendizado de máquina baseado em árvore de decisão que usa uma estrutura de gradiente _boosting_.
+
+O método penaliza modelos mais complexos por meio da regularização LASSO (L1) e Ridge (L2) para evitar _overfitting_. Além disso, o algoritmo vem com método de validação cruzada embutido em cada iteração, eliminando a necessidade de programar explicitamente essa pesquisa e especificar o número exato de iterações de reforço necessárias em uma única execução.
+
+
+No capítulo \@ref(resultados), discutiremos os resultados de cada um dos métodos.
+
+## Preparação para modelagem
+
+O código abaixo mostra a preparação final das bases de modelagem. Uma amostra de 50 mil observações foi considerada para, posteriormente, dividí-la em 70% para ajuste do modelo e 30% para cálculo de métricas out-of-sample. São também selecionadas as variáveis explicativas a serem inseridas no modelo.
+
+Para evitar o problema de bisbilhotagem dos dados visto em aula, os mais diversos tratamentos (como 'dummyzação' e recategorização das variáveis categóricas, reamostragem da base para balanceamento de classes) são construídos a partir da base de treinamento e apenas aplicados na base de teste.
+
+
+```{r results = 'hide', message=FALSE}
+
+df_model <- df[,c(#'NUM_BO', 
+  'target', 'LATITUDE', 'LONGITUDE', 'COR_CUTIS', 'SEXO_PESSOA',
+  'FLAG_VITIMA_FATAL', 'DESCR_TIPO_PESSOA', 'RUBRICA','DESCR_TIPOLOCAL')]
+df_model <- df_model[!(is.na(df$LATITUDE)), ]
+df_model <- sample_n(df_model, 50000)
+crime_split <- initial_split(df_model, prop = 0.7)
+crime_split
+crime_rec <- training(crime_split) %>%
+  recipe(target ~ ., data = df_model) %>%
+  #update_role(NUM_BO, new_role = "Id") %>%
+  step_other(DESCR_TIPOLOCAL, RUBRICA, DESCR_TIPO_PESSOA) %>%
+  step_dummy(COR_CUTIS, SEXO_PESSOA,FLAG_VITIMA_FATAL,
+             DESCR_TIPO_PESSOA, RUBRICA, DESCR_TIPOLOCAL) %>%
+  step_zv(all_predictors()) %>%
+  #step_normalize(all_predictors()) %>%
+  step_smote(target) %>%
+  prep()
+crime_testing <- crime_rec %>%
+  bake(testing(crime_split))
+crime_training <- juice(crime_rec)
+```
+
